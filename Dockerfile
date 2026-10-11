@@ -36,9 +36,16 @@ ENV USER=root
 ENV PATH=$HADOOP_HOME/bin/:$PATH
 
 RUN set -x \
-    && curl -fSL "$HADOOP_URL" -o /tmp/hadoop.tar.gz \
-    && tar -xvf /tmp/hadoop.tar.gz -C /opt/ \
-    && rm /tmp/hadoop.tar.gz*
+    && curl -fL \
+        --retry 10 \
+        --retry-delay 5 \
+        --retry-all-errors \
+        --connect-timeout 30 \
+        -C - \
+        "$HADOOP_URL" \
+        -o /tmp/hadoop.tar.gz \
+    && tar -xzf /tmp/hadoop.tar.gz -C /opt/ \
+    && rm /tmp/hadoop.tar.gz
 
 RUN ln -s $HADOOP_HOME/etc/hadoop /etc/hadoop
 RUN mkdir -p $HADOOP_HOME/logs
