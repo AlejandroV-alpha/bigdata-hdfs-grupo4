@@ -35,7 +35,7 @@ Persona 3
 ### 6.6 Analisis
 
 ## 7. Comparacion 1 GB vs 10 GB
-Persona 1
+Persona 2 y 3
 
 ## 8. Preguntas de analisis y exposicion
 Personas 1, 2 y 3
