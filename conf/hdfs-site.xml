@@ -101,4 +101,9 @@
                         connecting to other datanodes for data transfer.
                 </description>
         </property>
+
+        <property>
+                <name>dfs.replication</name>
+                <value>2</value>
+        </property>
 </configuration>
