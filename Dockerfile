@@ -1,24 +1,28 @@
-# Use the official OpenJDK 11 image as the base for the build
-FROM openjdk:11-jdk AS jdk
+# Base Java 11
+FROM eclipse-temurin:11-jdk AS jdk
 
-# Use the official Python 3.11 image
-FROM python:3.11
+# Python 3.11 sobre Debian Bookworm para mayor estabilidad
+FROM python:3.11-bookworm
 
 USER root
 
 # --------------------------------------------------------
-# JAVA
+# DEPENDENCIAS DEL SISTEMA
 # --------------------------------------------------------
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3-launchpadlib \
-    software-properties-common && \
+    curl \
+    ca-certificates \
+    perl \
+    tar \
+    gzip && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Set the JAVA_HOME environment variable for the AMD64 architecture
-ENV JAVA_HOME=/usr/local/openjdk-11
+# --------------------------------------------------------
+# JAVA
+# --------------------------------------------------------
+ENV JAVA_HOME=/opt/java/openjdk
 
-# Copy OpenJDK from the first stage
-COPY --from=jdk $JAVA_HOME $JAVA_HOME
+COPY --from=jdk /opt/java/openjdk /opt/java/openjdk
 
 # --------------------------------------------------------
 # HADOOP
@@ -30,8 +34,7 @@ ENV HADOOP_CONF_DIR=/etc/hadoop
 ENV MULTIHOMED_NETWORK=1
 ENV USER=root
 ENV HADOOP_HOME=/opt/hadoop-$HADOOP_VERSION
-ENV PATH $HADOOP_PREFIX/bin/:$PATH
-ENV PATH $HADOOP_HOME/bin/:$PATH
+ENV PATH=$HADOOP_PREFIX/bin/:$HADOOP_HOME/bin/:$PATH
 
 RUN set -x \
     && curl -fSL "$HADOOP_URL" -o /tmp/hadoop.tar.gz \
@@ -39,11 +42,12 @@ RUN set -x \
     && rm /tmp/hadoop.tar.gz*
 
 RUN ln -s /opt/hadoop-$HADOOP_VERSION/etc/hadoop /etc/hadoop
-RUN mkdir /opt/hadoop-$HADOOP_VERSION/logs
-RUN mkdir /hadoop-data
+RUN mkdir -p /opt/hadoop-$HADOOP_VERSION/logs
+RUN mkdir -p /hadoop-data
 
-USER root
-
+# --------------------------------------------------------
+# CONFIGURACION HADOOP
+# --------------------------------------------------------
 COPY conf/core-site.xml $HADOOP_CONF_DIR/core-site.xml
 COPY conf/hdfs-site.xml $HADOOP_CONF_DIR/hdfs-site.xml
 COPY conf/mapred-site.xml $HADOOP_CONF_DIR/mapred-site.xml
