@@ -420,10 +420,34 @@ Por eso un archivo puede seguir disponible aunque, durante un tiempo, no se est�
 
 Cada persona coloca las suyas.
 
+### Evidencias - Dataset 10 GB
+
+Las evidencias correspondientes a la prueba de tolerancia a fallos con el dataset de 10 GB se encuentran en:
+
+```text
+evidencias/grupo04/dataset_10GB/
+```
+
+En estas evidencias se registró el estado inicial del clúster, la distribución de bloques y réplicas, la caída de `datanode1`, la aparición de bloques subreplicados, la lectura completa del archivo durante la falla, la recuperación automática de las réplicas y el estado final del sistema.
+
 ## 10. Conclusion
 
 Entre los tres.
 
-## 11. Estructura del repositorio
+### Conclusion - Dataset 1 GB
+
+Persona 2
+
+### Conclusion - Dataset 10 GB
+
+En la prueba realizada con el dataset de 10 GB se pudo comprobar que HDFS mantiene disponible la información incluso cuando uno de los DataNodes deja de funcionar, siempre que exista otra réplica de los bloques afectados.
+
+Al detener `datanode1`, 50 de los 80 bloques quedaron temporalmente subreplicados. Sin embargo, ninguno de los bloques se perdió y el archivo continuó siendo accesible, por lo que fue posible leer los 10 GB completos durante la falla.
+
+También se observó que HDFS recuperó automáticamente las réplicas faltantes utilizando los DataNodes que permanecían activos. Después de este proceso, los bloques subreplicados volvieron a 0 y el promedio de replicación regresó a 2.0.
+
+Esta prueba permitió comprobar de forma práctica cómo la replicación de HDFS ayuda a mantener la disponibilidad de los datos y a recuperar automáticamente la redundancia cuando ocurre la falla de un DataNode.
+
+### Conclusion general
 
 Persona 1
