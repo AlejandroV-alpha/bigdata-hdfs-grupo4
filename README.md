@@ -285,7 +285,9 @@ Missing replicas: 0
 
 Esto demuestra que HDFS reconstruyó automáticamente las réplicas faltantes entre `datanode2` y `datanode3`, recuperando nuevamente el factor de replicación configurado en `2`.
 
-La primera medición con bloques subreplicados se realizó aproximadamente a las `00:17:06 UTC`, mientras que a las `00:26:13 UTC` el proceso ya se encontraba finalizado. Por lo tanto, la recuperación ocurrió dentro de un intervalo aproximado de **9 minutos**, aunque no se registró el instante exacto en el que terminó.
+La primera medición con bloques subreplicados se realizó aproximadamente a las `00:17:06 UTC`, mientras que a las `00:26:13 UTC` el proceso ya se encontraba finalizado.
+
+Por lo tanto, la recuperación fue confirmada dentro de un intervalo de aproximadamente **9 minutos**, aunque no se registró el instante exacto en el que finalizó.
 
 Después de comprobar la recuperación automática se restauró `datanode1` mediante:
 
@@ -365,9 +367,54 @@ El estado final mostró:
 
 Persona 2 y 3
 
+| Característica                       | Dataset 1 GB        | Dataset 10 GB                                                               |
+| ------------------------------------ | ------------------- | --------------------------------------------------------------------------- |
+| Tamaño                               | 1 GB                | 10 GB                                                                       |
+| Número de bloques                    | Pendiente Persona 2 | 80                                                                          |
+| Factor de replicación                | Pendiente Persona 2 | 2                                                                           |
+| DataNode afectado                    | Pendiente Persona 2 | datanode1                                                                   |
+| Bloques afectados                    | Pendiente Persona 2 | 50                                                                          |
+| Bloques disponibles después de falla | Pendiente Persona 2 | 80 de 80                                                                    |
+| ¿Archivo accesible?                  | Pendiente Persona 2 | Sí                                                                          |
+| ¿Existieron bloques subreplicados?   | Pendiente Persona 2 | Sí, 50                                                                      |
+| Tiempo de recuperación               | Pendiente Persona 2 | Recuperación confirmada dentro de un intervalo de aproximadamente 9 minutos |
+| Nuevas réplicas                      | Pendiente Persona 2 | Redistribuidas entre datanode2 y datanode3                                  |
+
 ## 8. Preguntas de analisis y exposicion
 
 Personas 1, 2 y 3
+
+### Pregunta 7
+
+**¿Qué sucede con los bloques que tenían una réplica en el DataNode que falló?**
+
+Cuando un DataNode falla, los bloques que tenían una réplica guardada en ese nodo pierden temporalmente una de sus copias y quedan subreplicados.
+
+En nuestra prueba con el dataset de 10 GB, al detener `datanode1`, 50 de los 80 bloques quedaron con una sola réplica disponible. Aun así, el archivo se pudo seguir leyendo porque esos bloques todavía tenían otra copia en alguno de los DataNodes que seguían funcionando.
+
+Después, HDFS detectó esa falta de réplicas y creó nuevas copias en los nodos disponibles hasta volver a cumplir el factor de replicación 2.
+
+### Pregunta 8
+
+**¿Quién administra la ubicación y replicación de los bloques: el cliente, el DataNode o el NameNode?**
+
+El encargado es el `NameNode`.
+
+El NameNode mantiene la información sobre qué bloques forman cada archivo, en qué DataNodes están guardados y cuántas réplicas existen de cada uno.
+
+Los DataNodes son los que almacenan físicamente los bloques, pero las decisiones sobre su ubicación y replicación son administradas por el NameNode.
+
+### Pregunta 9
+
+**¿Qué diferencia existe entre disponibilidad del archivo y cumplimiento del factor de replicación después de una falla?**
+
+La disponibilidad significa que el archivo todavía puede ser leído porque sigue existiendo al menos una copia disponible de cada bloque.
+
+En cambio, cumplir el factor de replicación significa que cada bloque tiene la cantidad de copias configurada en HDFS.
+
+En nuestra prueba, después de detener `datanode1`, el archivo seguía disponible, pero 50 bloques quedaron temporalmente con una sola réplica, aunque el factor configurado era 2.
+
+Por eso un archivo puede seguir disponible aunque, durante un tiempo, no se esté cumpliendo completamente el factor de replicación.
 
 ## 9. Evidencias
 
