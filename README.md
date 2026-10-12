@@ -36,8 +36,6 @@ Persona 2
 
 ## 6. Prueba de fallo - Dataset 10 GB
 
-Persona 3
-
 ### 6.1 Estado inicial
 
 Antes de realizar la prueba de fallo con el dataset de 10 GB, se verificó el estado del clúster Hadoop.
@@ -364,8 +362,6 @@ El estado final mostró:
 - Estado: **HEALTHY**
 
 ## 7. Comparacion 1 GB vs 10 GB
-
-Persona 2 y 3
 
 | Característica                       | Dataset 1 GB        | Dataset 10 GB                                                               |
 | ------------------------------------ | ------------------- | --------------------------------------------------------------------------- |
