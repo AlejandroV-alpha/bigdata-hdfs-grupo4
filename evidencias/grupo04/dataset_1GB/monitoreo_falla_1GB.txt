@@ -1,0 +1,9 @@
+﻿Hora de la falla: 23:25:53
+23:26:08 | Under replicated blocks: 0 | Live datanodes (3):
+23:26:15 | Under replicated blocks: 0 | Live datanodes (3):
+23:26:22 | Under replicated blocks: 0 | Live datanodes (3):
+23:26:29 | Under replicated blocks: 0 | Live datanodes (3):
+23:26:37 | Under replicated blocks: 0 | Live datanodes (3):
+23:26:44 | Under replicated blocks: 0 | Live datanodes (3):
+23:26:51 | Under replicated blocks: 0 | Live datanodes (3):
+23:26:58 | Under replicated blocks: 0 | Live datanodes (2): | Dead datanodes (1):

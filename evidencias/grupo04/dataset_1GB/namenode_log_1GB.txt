@@ -1,0 +1,1652 @@
+﻿remove lost+found from /hadoop/dfs/name
+Formatting namenode name directory: /hadoop/dfs/name
+docker : rm: cannot remove '/hadoop/dfs/name/lost+found': No such file or directory
+En C:\Users\HP\hadoop-environment\scripts_test\03_recuperar_datanode2.ps1: 50 Carácter: 1
++ docker logs namenode 2>&1 | Out-File -Encoding utf8 "$Evid\namenode_l ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (rm: cannot remo...le or directory:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+WARNING: HADOOP_PREFIX has been replaced by HADOOP_HOME. Using value of HADOOP_PREFIX.
+2026-10-11 03:27:27,890 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = b976ee89e303/172.23.0.2
+STARTUP_MSG:   args = [-format, test]
+STARTUP_MSG:   version = 3.3.6
+STARTUP_MSG:   classpath = /etc/hadoop:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-native-epoll-4.1.89.Fi
+nal-linux-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/guava-27.0-jre.jar:/opt/hadoop-3.3.6/share/hadoop/comm
+on/lib/netty-all-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jsr305-3.0.2.jar:/opt/hadoop-3.3.6/share/ha
+doop/common/lib/netty-codec-socks-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-core-1.0.1.jar:/opt/h
+adoop-3.3.6/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-util-1.0.1.jar
+:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-servlet-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib
+/audience-annotations-0.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-common-1.0.1.jar:/opt/hadoop-3.3.6/share
+/hadoop/common/lib/zookeeper-jute-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/opt/hado
+op-3.3.6/share/hadoop/common/lib/netty-transport-sctp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-
+xdr-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/failureaccess-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib
+/netty-codec-http-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-4.1.89.Final.jar:/opt/hadoop-3
+.3.6/share/hadoop/common/lib/netty-handler-proxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-mat
+h3-3.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/j2objc-annotations-1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common
+/lib/animal-sniffer-annotations-1.17.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-handler-4.1.89.Final.jar:/opt/
+hadoop-3.3.6/share/hadoop/common/lib/metrics-core-3.2.4.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-io-2.8.0.
+jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-rxtx-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/comm
+on/lib/jsch-0.1.55.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-server-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoo
+p/common/lib/jcip-annotations-1.0-1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/opt/hadoop-3.3.
+6/share/hadoop/common/lib/netty-buffer-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-resolver-dns-4.
+1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-core-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/common/l
+ib/token-provider-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-net-3.9.0.jar:/opt/hadoop-3.3.6/share/had
+oop/common/lib/commons-beanutils-1.9.4.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-classes-kqueue-4.1
+.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/hadoop-shaded-guava-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/co
+mmon/lib/jakarta.activation-api-1.2.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/reload4j-1.2.22.jar:/opt/hadoop-3.3
+.6/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-http-9.4.51.v202
+30217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-dns-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/com
+mon/lib/zookeeper-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-logging-1.1.3.jar:/opt/hadoop-3.3.6/share
+/hadoop/common/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/checker-qual-2.5.2.ja
+r:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-xml-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/sn
+appy-java-1.1.8.2.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-stomp-4.1.89.Final.jar:/opt/hadoop-3.3.6/sh
+are/hadoop/common/lib/netty-handler-ssl-ocsp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-daemon-
+1.0.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-xml-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/co
+mmon/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/paranamer-2.3.jar:/opt/hadoop-3.3.6/sh
+are/hadoop/common/lib/netty-resolver-dns-native-macos-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/common
+/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-config-1.0.1.jar:/opt/hadoop-3.3.6/sha
+re/hadoop/common/lib/netty-transport-native-kqueue-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/li
+b/jsr311-api-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-smtp-4.1.89.Final.jar:/opt/hadoop-3.3.6/sh
+are/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/hadoop-auth-3.3.6.jar:/opt/had
+oop-3.3.6/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-compress-1.
+21.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-redis-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/comm
+on/lib/netty-transport-native-kqueue-4.1.89.Final-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-cl
+i-1.2.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-codec-1.15.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/ne
+tty-transport-native-epoll-4.1.89.Final-linux-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jsp-api-2.1.jar:/opt
+/hadoop-3.3.6/share/hadoop/common/lib/jetty-server-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jaxb-
+impl-2.2.3-1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop
+/common/lib/jackson-annotations-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jettison-1.5.4.jar:/opt/hadoop-3.3
+.6/share/hadoop/common/lib/kerby-util-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar:/op
+t/hadoop-3.3.6/share/hadoop/common/lib/jackson-core-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-client-1.
+0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-udt-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/c
+ommon/lib/kerb-server-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/avro-1.7.7.jar:/opt/hadoop-3.3.6/share/hadoop
+/common/lib/netty-resolver-dns-native-macos-4.1.89.Final-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/net
+ty-transport-native-unix-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/hadoop-annotations-3.3.6.jar
+:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-util-ajax-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/l
+ib/stax2-api-4.2.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-g
+uava.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/curator-framework-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/li
+b/curator-client-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-util-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/
+share/hadoop/common/lib/jetty-webapp-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-asn1-1.0.1.ja
+r:/opt/hadoop-3.3.6/share/hadoop/common/lib/httpclient-4.5.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-json
+-1.20.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-lang3-3.12.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/
+netty-codec-http2-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-servlet-1.19.4.jar:/opt/hadoop-3.3.
+6/share/hadoop/common/lib/netty-codec-mqtt-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/httpcore-4.4.13.j
+ar:/opt/hadoop-3.3.6/share/hadoop/common/lib/curator-recipes-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-
+resolver-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/woodstox-core-5.4.0.jar:/opt/hadoop-3.3.6/share/had
+oop/common/lib/commons-text-1.10.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/gson-2.9.0.jar:/opt/hadoop-3.3.6/share
+/hadoop/common/lib/re2j-1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-memcache-4.1.89.Final.jar:/opt/ha
+doop-3.3.6/share/hadoop/common/lib/jackson-databind-2.12.7.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/nimbus-jose-
+jwt-9.8.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-security-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/had
+oop/common/lib/netty-resolver-dns-classes-macos-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-pkix-1
+.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-haproxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/
+common/lib/jaxb-api-2.2.11.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-configuration2-2.8.0.jar:/opt/hadoop-3
+.3.6/share/hadoop/common/lib/jetty-io-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jul-to-slf4j-1.7.3
+6.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/slf4j-api-1.7.36.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-
+collections-3.2.2.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-4.1.89.Final.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/common/lib/dnsjava-2.1.7.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-classes-epoll-4.1.89.Fi
+nal.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-kms-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-common-
+3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-nfs-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-commo
+n-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-registry-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs:/
+opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-native-epoll-4.1.89.Final-linux-aarch_64.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/hdfs/lib/guava-27.0-jre.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-all-4.1.89.Final.jar:/opt/hadoop-
+3.3.6/share/hadoop/hdfs/lib/jsr305-3.0.2.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-socks-4.1.89.Final.jar
+:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/HikariCP-java7-2.4
+.12.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-util
+-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-servlet-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hd
+fs/lib/audience-annotations-0.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/hdfs/lib/zookeeper-jute-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/opt/hado
+op-3.3.6/share/hadoop/hdfs/lib/netty-transport-sctp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-xdr-
+1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/failureaccess-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-c
+odec-http-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-4.1.89.Final.jar:/opt/hadoop-3.3.6/share
+/hadoop/hdfs/lib/netty-handler-proxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/
+opt/hadoop-3.3.6/share/hadoop/hdfs/lib/j2objc-annotations-1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/animal-sniffe
+r-annotations-1.17.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-handler-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/h
+adoop/hdfs/lib/netty-3.10.6.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/metrics-core-3.2.4.jar:/opt/hadoop-3.3.6/
+share/hadoop/hdfs/lib/commons-io-2.8.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-rxtx-4.1.89.Final.ja
+r:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jsch-0.1.55.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-server-1.19.4.
+jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-adm
+in-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-buffer-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/
+lib/netty-resolver-dns-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-core-1.19.4.jar:/opt/hadoop-3.3.
+6/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-net-3.9.0.jar:/opt/had
+oop-3.3.6/share/hadoop/hdfs/lib/commons-beanutils-1.9.4.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-cla
+sses-kqueue-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/okio-2.8.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs
+/lib/hadoop-shaded-guava-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jakarta.activation-api-1.2.1.jar:/opt/hadoop
+-3.3.6/share/hadoop/hdfs/lib/reload4j-1.2.22.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/o
+pt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-http-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/json-simp
+le-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-dns-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hd
+fs/lib/zookeeper-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/opt/hadoop-3.3.6/share/ha
+doop/hdfs/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/checker-qual-2.5.2.jar:/opt/
+hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-xml-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/snappy-java-1
+.1.8.2.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-stomp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hd
+fs/lib/netty-handler-ssl-ocsp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/opt/h
+adoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-xml-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-mapp
+er-asl-1.9.13.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/paranamer-2.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/net
+ty-resolver-dns-native-macos-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-core-asl-1.9.1
+3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-tran
+sport-native-kqueue-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/opt/hadoo
+p-3.3.6/share/hadoop/hdfs/lib/netty-codec-smtp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-simplekdc-
+1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/hadoop-auth-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/protobu
+f-java-2.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-compress-1.21.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/
+lib/netty-codec-redis-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-native-kqueue-4.1.89.Fin
+al-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib
+/commons-codec-1.15.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-native-epoll-4.1.89.Final-linux-x86_64.
+jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-server-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/j
+axb-impl-2.2.3-1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hado
+op/hdfs/lib/jackson-annotations-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jettison-1.5.4.jar:/opt/hadoop-3.3.6
+/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-core-2.12.7.jar:/opt/hadoop
+-3.3.6/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-udt-4.1.89.F
+inal.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kotlin-stdlib-common-1.4.10.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/li
+b/kerb-server-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/avro-1.7.7.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/
+netty-resolver-dns-native-macos-4.1.89.Final-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-n
+ative-unix-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/hadoop-annotations-3.3.6.jar:/opt/hadoop-3.3
+.6/share/hadoop/hdfs/lib/jetty-util-ajax-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/stax2-api-4.2.1.j
+ar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/opt/hadoop-3
+.3.6/share/hadoop/hdfs/lib/curator-framework-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/curator-client-5.2.0.jar
+:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-util-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-
+webapp-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop
+/hdfs/lib/httpclient-4.5.13.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-json-1.20.jar:/opt/hadoop-3.3.6/share/ha
+doop/hdfs/lib/commons-lang3-3.12.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-http2-4.1.89.Final.jar:/opt/
+hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-servlet-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-mqtt-4
+.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/okhttp-4.9.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/httpco
+re-4.4.13.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/curator-recipes-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib
+/netty-resolver-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/woodstox-core-5.4.0.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/hdfs/lib/commons-text-1.10.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/gson-2.9.0.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/hdfs/lib/kotlin-stdlib-1.4.10.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/re2j-1.1.jar:/opt/hadoop-3.3.6/share
+/hadoop/hdfs/lib/netty-codec-memcache-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/
+opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-databind-2.12.7.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/nimbus-jos
+e-jwt-9.8.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-security-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/had
+oop/hdfs/lib/netty-resolver-dns-classes-macos-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-pkix-1.0.1
+.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-haproxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/l
+ib/jaxb-api-2.2.11.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-configuration2-2.8.0.jar:/opt/hadoop-3.3.6/share
+/hadoop/hdfs/lib/jetty-io-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/o
+pt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/dnsjava-
+2.1.7.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-classes-epoll-4.1.89.Final.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/hdfs/hadoop-hdfs-client-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-native-client-3.3.6.jar:/opt
+/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-client-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-3.3.
+6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-native-client-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs
+/hadoop-hdfs-nfs-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-rbf-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop
+/hdfs/hadoop-hdfs-rbf-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.3.6.jar:/opt/hadoop-3.3.
+6/share/hadoop/hdfs/hadoop-hdfs-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-native
+task-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.3.6.jar:/opt/hadoop-3.3.6/sha
+re/hadoop/mapreduce/hadoop-mapreduce-client-app-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-cli
+ent-uploader-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.6.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapre
+duce-client-hs-plugins-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.3.6.jar:/opt/had
+oop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop
+-mapreduce-client-common-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.3.6-tes
+ts.jar:/opt/hadoop-3.3.6/share/hadoop/yarn:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jetty-plus-9.4.51.v20230217.jar:/opt
+/hadoop-3.3.6/share/hadoop/yarn/lib/java-util-1.9.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/javax.websocket-client-
+api-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jline-3.9.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jetty-annot
+ations-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/websocket-api-9.4.51.v20230217.jar:/opt/hadoop-3.3.
+6/share/hadoop/yarn/lib/bcprov-jdk15on-1.68.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/fst-2.50.jar:/opt/hadoop-3.3.6/
+share/hadoop/yarn/lib/snakeyaml-2.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/json-io-2.5.1.jar:/opt/hadoop-3.3.6/sha
+re/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/opt
+/hadoop-3.3.6/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/aopalliance-1.0.jar:/opt/
+hadoop-3.3.6/share/hadoop/yarn/lib/javax-websocket-client-impl-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn
+/lib/jakarta.xml.bind-api-2.3.2.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jna-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoo
+p/yarn/lib/jetty-client-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/websocket-servlet-9.4.51.v20230217
+.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/javax.websocket-api-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jersey
+-client-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jersey-guice-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/
+lib/websocket-client-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/bcpkix-jdk15on-1.68.jar:/opt/hadoop-3
+.3.6/share/hadoop/yarn/lib/websocket-common-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jackson-jaxrs-
+json-provider-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/opt/hadoop-3
+.3.6/share/hadoop/yarn/lib/asm-tree-9.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/javax.inject-1.jar:/opt/hadoop-3.3.
+6/share/hadoop/yarn/lib/websocket-server-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jetty-jndi-9.4.51
+.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/ob
+jenesis-2.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jackson-jaxrs-base-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/ya
+rn/lib/jackson-module-jaxb-annotations-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/asm-commons-9.4.jar:/opt/hado
+op-3.3.6/share/hadoop/yarn/lib/javax-websocket-server-impl-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib
+/guice-4.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-router-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/y
+arn/hadoop-yarn-server-tests-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launch
+er-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.3.6.jar:/opt/hadoop-3.3.6/
+share/hadoop/yarn/hadoop-yarn-services-core-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-applications-mawo
+-core-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.3.6.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/yarn/hadoop-yarn-client-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-api-3.3.6.jar:/opt/hadoop
+-3.3.6/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/had
+oop-yarn-services-api-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.3.6.jar:/opt/hadoo
+p-3.3.6/share/hadoop/yarn/hadoop-yarn-common-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-common-3.
+3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop
+/yarn/hadoop-yarn-server-timeline-pluginstorage-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-registry-3.3.
+6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.3.6.jar
+STARTUP_MSG:   build = https://github.com/apache/hadoop.git -r 1be78238728da9266a4f88195058f08fd012bf9c; compiled by 
+'ubuntu' on 2023-06-18T08:22Z
+STARTUP_MSG:   java = 11.0.32.1
+************************************************************/
+2026-10-11 03:27:27,934 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2026-10-11 03:27:28,417 INFO namenode.NameNode: createNameNode [-format, test]
+2026-10-11 03:27:31,666 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-11 03:27:31,668 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-11 03:27:31,697 INFO namenode.NameNode: Formatting using clusterid: CID-8511b347-879f-453a-bac9-5767f8e35f5e
+2026-10-11 03:27:32,042 INFO namenode.FSEditLog: Edit logging is async:true
+2026-10-11 03:27:32,184 INFO namenode.FSNamesystem: KeyProvider: null
+2026-10-11 03:27:32,194 INFO namenode.FSNamesystem: fsLock is fair: true
+2026-10-11 03:27:32,195 INFO namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2026-10-11 03:27:32,267 INFO namenode.FSNamesystem: fsOwner                = root (auth:SIMPLE)
+2026-10-11 03:27:32,267 INFO namenode.FSNamesystem: supergroup             = supergroup
+2026-10-11 03:27:32,267 INFO namenode.FSNamesystem: isPermissionEnabled    = false
+2026-10-11 03:27:32,267 INFO namenode.FSNamesystem: isStoragePolicyEnabled = true
+2026-10-11 03:27:32,268 INFO namenode.FSNamesystem: HA Enabled: false
+2026-10-11 03:27:32,563 INFO common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file 
+IO profiling
+2026-10-11 03:27:34,474 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit : configured=1000, 
+counted=60, effected=1000
+2026-10-11 03:27:34,475 INFO blockmanagement.DatanodeManager: 
+dfs.namenode.datanode.registration.ip-hostname-check=false
+2026-10-11 03:27:34,517 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 
+000:00:00:00.000
+2026-10-11 03:27:34,519 INFO blockmanagement.BlockManager: The block deletion will start around 2026 Oct 11 03:27:34
+2026-10-11 03:27:34,529 INFO util.GSet: Computing capacity for map BlocksMap
+2026-10-11 03:27:34,530 INFO util.GSet: VM type       = 64-bit
+2026-10-11 03:27:34,537 INFO util.GSet: 2.0% max memory 896 MB = 17.9 MB
+2026-10-11 03:27:34,537 INFO util.GSet: capacity      = 2^21 = 2097152 entries
+2026-10-11 03:27:35,045 INFO blockmanagement.BlockManager: Storage policy satisfier is disabled
+2026-10-11 03:27:35,045 INFO blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2026-10-11 03:27:35,171 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.999
+2026-10-11 03:27:35,172 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2026-10-11 03:27:35,172 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2026-10-11 03:27:35,174 INFO blockmanagement.BlockManager: defaultReplication         = 2
+2026-10-11 03:27:35,174 INFO blockmanagement.BlockManager: maxReplication             = 512
+2026-10-11 03:27:35,174 INFO blockmanagement.BlockManager: minReplication             = 1
+2026-10-11 03:27:35,174 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+2026-10-11 03:27:35,174 INFO blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2026-10-11 03:27:35,174 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+2026-10-11 03:27:35,174 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2026-10-11 03:27:35,637 INFO namenode.FSDirectory: GLOBAL serial map: bits=29 maxEntries=536870911
+2026-10-11 03:27:35,637 INFO namenode.FSDirectory: USER serial map: bits=24 maxEntries=16777215
+2026-10-11 03:27:35,637 INFO namenode.FSDirectory: GROUP serial map: bits=24 maxEntries=16777215
+2026-10-11 03:27:35,637 INFO namenode.FSDirectory: XATTR serial map: bits=24 maxEntries=16777215
+2026-10-11 03:27:35,749 INFO util.GSet: Computing capacity for map INodeMap
+2026-10-11 03:27:35,749 INFO util.GSet: VM type       = 64-bit
+2026-10-11 03:27:35,750 INFO util.GSet: 1.0% max memory 896 MB = 9.0 MB
+2026-10-11 03:27:35,750 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+2026-10-11 03:27:35,854 INFO namenode.FSDirectory: ACLs enabled? true
+2026-10-11 03:27:35,854 INFO namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2026-10-11 03:27:35,854 INFO namenode.FSDirectory: XAttrs enabled? true
+2026-10-11 03:27:35,855 INFO namenode.NameNode: Caching file names occurring more than 10 times
+2026-10-11 03:27:35,877 INFO snapshot.SnapshotManager: Loaded config captureOpenFiles: false, 
+skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2026-10-11 03:27:35,882 INFO snapshot.SnapshotManager: SkipList is disabled
+2026-10-11 03:27:35,904 INFO util.GSet: Computing capacity for map cachedBlocks
+2026-10-11 03:27:35,904 INFO util.GSet: VM type       = 64-bit
+2026-10-11 03:27:35,904 INFO util.GSet: 0.25% max memory 896 MB = 2.2 MB
+2026-10-11 03:27:35,904 INFO util.GSet: capacity      = 2^18 = 262144 entries
+2026-10-11 03:27:35,951 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2026-10-11 03:27:35,951 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2026-10-11 03:27:35,951 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2026-10-11 03:27:35,970 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+2026-10-11 03:27:35,970 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry 
+expiry time is 600000 millis
+2026-10-11 03:27:35,991 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+2026-10-11 03:27:35,991 INFO util.GSet: VM type       = 64-bit
+2026-10-11 03:27:35,994 INFO util.GSet: 0.029999999329447746% max memory 896 MB = 275.3 KB
+2026-10-11 03:27:35,994 INFO util.GSet: capacity      = 2^15 = 32768 entries
+2026-10-11 03:27:36,137 INFO namenode.FSImage: Allocated new BlockPoolId: BP-499028059-172.23.0.2-1791689256096
+2026-10-11 03:27:36,221 INFO common.Storage: Storage directory /hadoop/dfs/name has been successfully formatted.
+2026-10-11 03:27:36,392 INFO namenode.FSImageFormatProtobuf: Saving image file 
+/hadoop/dfs/name/current/fsimage.ckpt_0000000000000000000 using no compression
+2026-10-11 03:27:36,956 INFO namenode.FSImageFormatProtobuf: Image file 
+/hadoop/dfs/name/current/fsimage.ckpt_0000000000000000000 of size 399 bytes saved in 0 seconds .
+2026-10-11 03:27:36,999 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+2026-10-11 03:27:37,045 INFO namenode.FSNamesystem: Stopping services started for active state
+2026-10-11 03:27:37,046 INFO namenode.FSNamesystem: Stopping services started for standby state
+2026-10-11 03:27:37,067 INFO namenode.FSImage: FSImageSaver clean checkpoint: txid=0 when meet shutdown.
+2026-10-11 03:27:37,071 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at b976ee89e303/172.23.0.2
+************************************************************/
+WARNING: HADOOP_PREFIX has been replaced by HADOOP_HOME. Using value of HADOOP_PREFIX.
+2026-10-11 03:27:44,067 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = b976ee89e303/172.23.0.2
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 3.3.6
+STARTUP_MSG:   classpath = /etc/hadoop:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-native-epoll-4.1.89.Fi
+nal-linux-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/guava-27.0-jre.jar:/opt/hadoop-3.3.6/share/hadoop/comm
+on/lib/netty-all-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jsr305-3.0.2.jar:/opt/hadoop-3.3.6/share/ha
+doop/common/lib/netty-codec-socks-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-core-1.0.1.jar:/opt/h
+adoop-3.3.6/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-util-1.0.1.jar
+:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-servlet-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib
+/audience-annotations-0.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-common-1.0.1.jar:/opt/hadoop-3.3.6/share
+/hadoop/common/lib/zookeeper-jute-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/opt/hado
+op-3.3.6/share/hadoop/common/lib/netty-transport-sctp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-
+xdr-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/failureaccess-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib
+/netty-codec-http-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-4.1.89.Final.jar:/opt/hadoop-3
+.3.6/share/hadoop/common/lib/netty-handler-proxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-mat
+h3-3.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/j2objc-annotations-1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common
+/lib/animal-sniffer-annotations-1.17.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-handler-4.1.89.Final.jar:/opt/
+hadoop-3.3.6/share/hadoop/common/lib/metrics-core-3.2.4.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-io-2.8.0.
+jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-rxtx-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/comm
+on/lib/jsch-0.1.55.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-server-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoo
+p/common/lib/jcip-annotations-1.0-1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/opt/hadoop-3.3.
+6/share/hadoop/common/lib/netty-buffer-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-resolver-dns-4.
+1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-core-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/common/l
+ib/token-provider-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-net-3.9.0.jar:/opt/hadoop-3.3.6/share/had
+oop/common/lib/commons-beanutils-1.9.4.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-classes-kqueue-4.1
+.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/hadoop-shaded-guava-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/co
+mmon/lib/jakarta.activation-api-1.2.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/reload4j-1.2.22.jar:/opt/hadoop-3.3
+.6/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-http-9.4.51.v202
+30217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-dns-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/com
+mon/lib/zookeeper-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-logging-1.1.3.jar:/opt/hadoop-3.3.6/share
+/hadoop/common/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/checker-qual-2.5.2.ja
+r:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-xml-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/sn
+appy-java-1.1.8.2.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-stomp-4.1.89.Final.jar:/opt/hadoop-3.3.6/sh
+are/hadoop/common/lib/netty-handler-ssl-ocsp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-daemon-
+1.0.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-xml-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/co
+mmon/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/paranamer-2.3.jar:/opt/hadoop-3.3.6/sh
+are/hadoop/common/lib/netty-resolver-dns-native-macos-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/common
+/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-config-1.0.1.jar:/opt/hadoop-3.3.6/sha
+re/hadoop/common/lib/netty-transport-native-kqueue-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/li
+b/jsr311-api-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-smtp-4.1.89.Final.jar:/opt/hadoop-3.3.6/sh
+are/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/hadoop-auth-3.3.6.jar:/opt/had
+oop-3.3.6/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-compress-1.
+21.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-redis-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/comm
+on/lib/netty-transport-native-kqueue-4.1.89.Final-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-cl
+i-1.2.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-codec-1.15.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/ne
+tty-transport-native-epoll-4.1.89.Final-linux-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jsp-api-2.1.jar:/opt
+/hadoop-3.3.6/share/hadoop/common/lib/jetty-server-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jaxb-
+impl-2.2.3-1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop
+/common/lib/jackson-annotations-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jettison-1.5.4.jar:/opt/hadoop-3.3
+.6/share/hadoop/common/lib/kerby-util-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar:/op
+t/hadoop-3.3.6/share/hadoop/common/lib/jackson-core-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-client-1.
+0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-udt-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/c
+ommon/lib/kerb-server-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/avro-1.7.7.jar:/opt/hadoop-3.3.6/share/hadoop
+/common/lib/netty-resolver-dns-native-macos-4.1.89.Final-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/net
+ty-transport-native-unix-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/hadoop-annotations-3.3.6.jar
+:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-util-ajax-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/l
+ib/stax2-api-4.2.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-g
+uava.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/curator-framework-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/li
+b/curator-client-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-util-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/
+share/hadoop/common/lib/jetty-webapp-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-asn1-1.0.1.ja
+r:/opt/hadoop-3.3.6/share/hadoop/common/lib/httpclient-4.5.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-json
+-1.20.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-lang3-3.12.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/
+netty-codec-http2-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-servlet-1.19.4.jar:/opt/hadoop-3.3.
+6/share/hadoop/common/lib/netty-codec-mqtt-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/httpcore-4.4.13.j
+ar:/opt/hadoop-3.3.6/share/hadoop/common/lib/curator-recipes-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-
+resolver-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/woodstox-core-5.4.0.jar:/opt/hadoop-3.3.6/share/had
+oop/common/lib/commons-text-1.10.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/gson-2.9.0.jar:/opt/hadoop-3.3.6/share
+/hadoop/common/lib/re2j-1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-memcache-4.1.89.Final.jar:/opt/ha
+doop-3.3.6/share/hadoop/common/lib/jackson-databind-2.12.7.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/nimbus-jose-
+jwt-9.8.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-security-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/had
+oop/common/lib/netty-resolver-dns-classes-macos-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-pkix-1
+.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-haproxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/
+common/lib/jaxb-api-2.2.11.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-configuration2-2.8.0.jar:/opt/hadoop-3
+.3.6/share/hadoop/common/lib/jetty-io-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jul-to-slf4j-1.7.3
+6.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/slf4j-api-1.7.36.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-
+collections-3.2.2.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-4.1.89.Final.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/common/lib/dnsjava-2.1.7.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-classes-epoll-4.1.89.Fi
+nal.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-kms-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-common-
+3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-nfs-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-commo
+n-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-registry-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs:/
+opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-native-epoll-4.1.89.Final-linux-aarch_64.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/hdfs/lib/guava-27.0-jre.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-all-4.1.89.Final.jar:/opt/hadoop-
+3.3.6/share/hadoop/hdfs/lib/jsr305-3.0.2.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-socks-4.1.89.Final.jar
+:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/HikariCP-java7-2.4
+.12.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-util
+-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-servlet-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hd
+fs/lib/audience-annotations-0.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/hdfs/lib/zookeeper-jute-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/opt/hado
+op-3.3.6/share/hadoop/hdfs/lib/netty-transport-sctp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-xdr-
+1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/failureaccess-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-c
+odec-http-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-4.1.89.Final.jar:/opt/hadoop-3.3.6/share
+/hadoop/hdfs/lib/netty-handler-proxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/
+opt/hadoop-3.3.6/share/hadoop/hdfs/lib/j2objc-annotations-1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/animal-sniffe
+r-annotations-1.17.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-handler-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/h
+adoop/hdfs/lib/netty-3.10.6.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/metrics-core-3.2.4.jar:/opt/hadoop-3.3.6/
+share/hadoop/hdfs/lib/commons-io-2.8.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-rxtx-4.1.89.Final.ja
+r:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jsch-0.1.55.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-server-1.19.4.
+jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-adm
+in-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-buffer-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/
+lib/netty-resolver-dns-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-core-1.19.4.jar:/opt/hadoop-3.3.
+6/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-net-3.9.0.jar:/opt/had
+oop-3.3.6/share/hadoop/hdfs/lib/commons-beanutils-1.9.4.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-cla
+sses-kqueue-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/okio-2.8.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs
+/lib/hadoop-shaded-guava-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jakarta.activation-api-1.2.1.jar:/opt/hadoop
+-3.3.6/share/hadoop/hdfs/lib/reload4j-1.2.22.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/o
+pt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-http-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/json-simp
+le-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-dns-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hd
+fs/lib/zookeeper-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/opt/hadoop-3.3.6/share/ha
+doop/hdfs/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/checker-qual-2.5.2.jar:/opt/
+hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-xml-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/snappy-java-1
+.1.8.2.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-stomp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hd
+fs/lib/netty-handler-ssl-ocsp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/opt/h
+adoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-xml-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-mapp
+er-asl-1.9.13.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/paranamer-2.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/net
+ty-resolver-dns-native-macos-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-core-asl-1.9.1
+3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-tran
+sport-native-kqueue-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/opt/hadoo
+p-3.3.6/share/hadoop/hdfs/lib/netty-codec-smtp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-simplekdc-
+1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/hadoop-auth-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/protobu
+f-java-2.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-compress-1.21.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/
+lib/netty-codec-redis-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-native-kqueue-4.1.89.Fin
+al-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib
+/commons-codec-1.15.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-native-epoll-4.1.89.Final-linux-x86_64.
+jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-server-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/j
+axb-impl-2.2.3-1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hado
+op/hdfs/lib/jackson-annotations-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jettison-1.5.4.jar:/opt/hadoop-3.3.6
+/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-core-2.12.7.jar:/opt/hadoop
+-3.3.6/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-udt-4.1.89.F
+inal.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kotlin-stdlib-common-1.4.10.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/li
+b/kerb-server-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/avro-1.7.7.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/
+netty-resolver-dns-native-macos-4.1.89.Final-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-n
+ative-unix-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/hadoop-annotations-3.3.6.jar:/opt/hadoop-3.3
+.6/share/hadoop/hdfs/lib/jetty-util-ajax-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/stax2-api-4.2.1.j
+ar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/opt/hadoop-3
+.3.6/share/hadoop/hdfs/lib/curator-framework-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/curator-client-5.2.0.jar
+:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-util-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-
+webapp-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop
+/hdfs/lib/httpclient-4.5.13.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-json-1.20.jar:/opt/hadoop-3.3.6/share/ha
+doop/hdfs/lib/commons-lang3-3.12.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-http2-4.1.89.Final.jar:/opt/
+hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-servlet-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-mqtt-4
+.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/okhttp-4.9.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/httpco
+re-4.4.13.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/curator-recipes-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib
+/netty-resolver-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/woodstox-core-5.4.0.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/hdfs/lib/commons-text-1.10.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/gson-2.9.0.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/hdfs/lib/kotlin-stdlib-1.4.10.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/re2j-1.1.jar:/opt/hadoop-3.3.6/share
+/hadoop/hdfs/lib/netty-codec-memcache-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/
+opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-databind-2.12.7.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/nimbus-jos
+e-jwt-9.8.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-security-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/had
+oop/hdfs/lib/netty-resolver-dns-classes-macos-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-pkix-1.0.1
+.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-haproxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/l
+ib/jaxb-api-2.2.11.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-configuration2-2.8.0.jar:/opt/hadoop-3.3.6/share
+/hadoop/hdfs/lib/jetty-io-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/o
+pt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/dnsjava-
+2.1.7.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-classes-epoll-4.1.89.Final.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/hdfs/hadoop-hdfs-client-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-native-client-3.3.6.jar:/opt
+/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-client-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-3.3.
+6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-native-client-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs
+/hadoop-hdfs-nfs-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-rbf-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop
+/hdfs/hadoop-hdfs-rbf-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.3.6.jar:/opt/hadoop-3.3.
+6/share/hadoop/hdfs/hadoop-hdfs-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-native
+task-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.3.6.jar:/opt/hadoop-3.3.6/sha
+re/hadoop/mapreduce/hadoop-mapreduce-client-app-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-cli
+ent-uploader-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.6.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapre
+duce-client-hs-plugins-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.3.6.jar:/opt/had
+oop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop
+-mapreduce-client-common-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.3.6-tes
+ts.jar:/opt/hadoop-3.3.6/share/hadoop/yarn:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jetty-plus-9.4.51.v20230217.jar:/opt
+/hadoop-3.3.6/share/hadoop/yarn/lib/java-util-1.9.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/javax.websocket-client-
+api-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jline-3.9.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jetty-annot
+ations-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/websocket-api-9.4.51.v20230217.jar:/opt/hadoop-3.3.
+6/share/hadoop/yarn/lib/bcprov-jdk15on-1.68.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/fst-2.50.jar:/opt/hadoop-3.3.6/
+share/hadoop/yarn/lib/snakeyaml-2.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/json-io-2.5.1.jar:/opt/hadoop-3.3.6/sha
+re/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/opt
+/hadoop-3.3.6/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/aopalliance-1.0.jar:/opt/
+hadoop-3.3.6/share/hadoop/yarn/lib/javax-websocket-client-impl-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn
+/lib/jakarta.xml.bind-api-2.3.2.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jna-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoo
+p/yarn/lib/jetty-client-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/websocket-servlet-9.4.51.v20230217
+.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/javax.websocket-api-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jersey
+-client-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jersey-guice-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/
+lib/websocket-client-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/bcpkix-jdk15on-1.68.jar:/opt/hadoop-3
+.3.6/share/hadoop/yarn/lib/websocket-common-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jackson-jaxrs-
+json-provider-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/opt/hadoop-3
+.3.6/share/hadoop/yarn/lib/asm-tree-9.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/javax.inject-1.jar:/opt/hadoop-3.3.
+6/share/hadoop/yarn/lib/websocket-server-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jetty-jndi-9.4.51
+.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/ob
+jenesis-2.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jackson-jaxrs-base-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/ya
+rn/lib/jackson-module-jaxb-annotations-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/asm-commons-9.4.jar:/opt/hado
+op-3.3.6/share/hadoop/yarn/lib/javax-websocket-server-impl-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib
+/guice-4.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-router-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/y
+arn/hadoop-yarn-server-tests-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launch
+er-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.3.6.jar:/opt/hadoop-3.3.6/
+share/hadoop/yarn/hadoop-yarn-services-core-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-applications-mawo
+-core-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.3.6.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/yarn/hadoop-yarn-client-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-api-3.3.6.jar:/opt/hadoop
+-3.3.6/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/had
+oop-yarn-services-api-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.3.6.jar:/opt/hadoo
+p-3.3.6/share/hadoop/yarn/hadoop-yarn-common-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-common-3.
+3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop
+/yarn/hadoop-yarn-server-timeline-pluginstorage-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-registry-3.3.
+6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.3.6.jar
+STARTUP_MSG:   build = https://github.com/apache/hadoop.git -r 1be78238728da9266a4f88195058f08fd012bf9c; compiled by 
+'ubuntu' on 2023-06-18T08:22Z
+STARTUP_MSG:   java = 11.0.32.1
+************************************************************/
+2026-10-11 03:27:44,098 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2026-10-11 03:27:44,451 INFO namenode.NameNode: createNameNode []
+2026-10-11 03:27:44,895 INFO impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2026-10-11 03:27:45,533 INFO impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2026-10-11 03:27:45,533 INFO impl.MetricsSystemImpl: NameNode metrics system started
+2026-10-11 03:27:45,588 INFO namenode.NameNodeUtils: fs.defaultFS is hdfs://namenode:8020
+2026-10-11 03:27:45,589 INFO namenode.NameNode: Clients should use namenode:8020 to access this namenode/service.
+2026-10-11 03:27:46,220 INFO util.JvmPauseMonitor: Starting JVM pause monitor
+2026-10-11 03:27:46,333 INFO hdfs.DFSUtil: Filter initializers set : 
+org.apache.hadoop.http.lib.StaticUserWebFilter,org.apache.hadoop.hdfs.web.AuthFilterInitializer
+2026-10-11 03:27:46,346 INFO hdfs.DFSUtil: Starting Web-server for hdfs at: http://0.0.0.0:9870
+2026-10-11 03:27:46,374 INFO util.log: Logging initialized @8566ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-11 03:27:46,591 WARN server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back 
+to use random secrets. Reason: Could not read signature secret file: /root/hadoop-http-auth-signature-secret
+2026-10-11 03:27:46,655 INFO http.HttpRequestLog: Http request log for http.requests.namenode is not defined
+2026-10-11 03:27:46,674 INFO http.HttpServer2: Added global filter 'safety' 
+(class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2026-10-11 03:27:46,679 INFO http.HttpServer2: Added filter static_user_filter 
+(class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context hdfs
+2026-10-11 03:27:46,679 INFO http.HttpServer2: Added filter static_user_filter 
+(class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2026-10-11 03:27:46,680 INFO http.HttpServer2: Added filter static_user_filter 
+(class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2026-10-11 03:27:46,684 INFO http.HttpServer2: Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) 
+to context hdfs
+2026-10-11 03:27:46,684 INFO http.HttpServer2: Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) 
+to context logs
+2026-10-11 03:27:46,684 INFO http.HttpServer2: Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) 
+to context static
+2026-10-11 03:27:46,952 INFO http.HttpServer2: addJerseyResourcePackage: 
+packageName=org.apache.hadoop.hdfs.server.namenode.web.resources;org.apache.hadoop.hdfs.web.resources, 
+pathSpec=/webhdfs/v1/*
+2026-10-11 03:27:47,029 INFO http.HttpServer2: Jetty bound to port 9870
+2026-10-11 03:27:47,033 INFO server.Server: jetty-9.4.51.v20230217; built: 2023-02-17T08:19:37.309Z; git: 
+b45c405e4544384de066f814ed42ae3dceacdd49; jvm 11.0.32.1+1
+2026-10-11 03:27:47,156 INFO server.session: DefaultSessionIdManager workerName=node0
+2026-10-11 03:27:47,156 INFO server.session: No SessionScavenger set, using defaults
+2026-10-11 03:27:47,164 INFO server.session: node0 Scavenging every 660000ms
+2026-10-11 03:27:47,243 WARN server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back 
+to use random secrets. Reason: Could not read signature secret file: /root/hadoop-http-auth-signature-secret
+2026-10-11 03:27:47,256 INFO handler.ContextHandler: Started 
+o.e.j.s.ServletContextHandler@207b8649{logs,/logs,file:///opt/hadoop-3.3.6/logs/,AVAILABLE}
+2026-10-11 03:27:47,260 INFO handler.ContextHandler: Started o.e.j.s.ServletContextHandler@2cae1042{static,/static,file
+:///opt/hadoop-3.3.6/share/hadoop/hdfs/webapps/static/,AVAILABLE}
+2026-10-11 03:27:47,783 INFO handler.ContextHandler: Started o.e.j.w.WebAppContext@410954b{hdfs,/,file:///opt/hadoop-3.
+3.6/share/hadoop/hdfs/webapps/hdfs/,AVAILABLE}{file:/opt/hadoop-3.3.6/share/hadoop/hdfs/webapps/hdfs}
+2026-10-11 03:27:47,825 INFO server.AbstractConnector: Started ServerConnector@3918c187{HTTP/1.1, 
+(http/1.1)}{0.0.0.0:9870}
+2026-10-11 03:27:47,826 INFO server.Server: Started @10018ms
+2026-10-11 03:27:48,809 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-11 03:27:48,810 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-11 03:27:48,811 WARN namenode.FSNamesystem: Only one image storage directory (dfs.namenode.name.dir) 
+configured. Beware of data loss due to lack of redundant storage directories!
+2026-10-11 03:27:48,811 WARN namenode.FSNamesystem: Only one namespace edits storage directory 
+(dfs.namenode.edits.dir) configured. Beware of data loss due to lack of redundant storage directories!
+2026-10-11 03:27:48,837 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-11 03:27:48,837 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-11 03:27:49,094 INFO namenode.FSEditLog: Edit logging is async:true
+2026-10-11 03:27:49,163 INFO namenode.FSNamesystem: KeyProvider: null
+2026-10-11 03:27:49,167 INFO namenode.FSNamesystem: fsLock is fair: true
+2026-10-11 03:27:49,167 INFO namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2026-10-11 03:27:49,217 INFO namenode.FSNamesystem: fsOwner                = root (auth:SIMPLE)
+2026-10-11 03:27:49,217 INFO namenode.FSNamesystem: supergroup             = supergroup
+2026-10-11 03:27:49,217 INFO namenode.FSNamesystem: isPermissionEnabled    = false
+2026-10-11 03:27:49,217 INFO namenode.FSNamesystem: isStoragePolicyEnabled = true
+2026-10-11 03:27:49,217 INFO namenode.FSNamesystem: HA Enabled: false
+2026-10-11 03:27:49,308 INFO common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file 
+IO profiling
+2026-10-11 03:27:50,366 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit : configured=1000, 
+counted=60, effected=1000
+2026-10-11 03:27:50,367 INFO blockmanagement.DatanodeManager: 
+dfs.namenode.datanode.registration.ip-hostname-check=false
+2026-10-11 03:27:50,380 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 
+000:00:00:00.000
+2026-10-11 03:27:50,381 INFO blockmanagement.BlockManager: The block deletion will start around 2026 Oct 11 03:27:50
+2026-10-11 03:27:50,390 INFO util.GSet: Computing capacity for map BlocksMap
+2026-10-11 03:27:50,390 INFO util.GSet: VM type       = 64-bit
+2026-10-11 03:27:50,393 INFO util.GSet: 2.0% max memory 896 MB = 17.9 MB
+2026-10-11 03:27:50,393 INFO util.GSet: capacity      = 2^21 = 2097152 entries
+2026-10-11 03:27:50,811 INFO blockmanagement.BlockManager: Storage policy satisfier is disabled
+2026-10-11 03:27:50,811 INFO blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2026-10-11 03:27:50,834 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.999
+2026-10-11 03:27:50,834 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2026-10-11 03:27:50,834 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2026-10-11 03:27:50,837 INFO blockmanagement.BlockManager: defaultReplication         = 2
+2026-10-11 03:27:50,838 INFO blockmanagement.BlockManager: maxReplication             = 512
+2026-10-11 03:27:50,838 INFO blockmanagement.BlockManager: minReplication             = 1
+2026-10-11 03:27:50,838 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+2026-10-11 03:27:50,838 INFO blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2026-10-11 03:27:50,838 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+2026-10-11 03:27:50,838 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2026-10-11 03:27:50,982 INFO namenode.FSDirectory: GLOBAL serial map: bits=29 maxEntries=536870911
+2026-10-11 03:27:50,982 INFO namenode.FSDirectory: USER serial map: bits=24 maxEntries=16777215
+2026-10-11 03:27:50,982 INFO namenode.FSDirectory: GROUP serial map: bits=24 maxEntries=16777215
+2026-10-11 03:27:50,982 INFO namenode.FSDirectory: XATTR serial map: bits=24 maxEntries=16777215
+2026-10-11 03:27:51,046 INFO util.GSet: Computing capacity for map INodeMap
+2026-10-11 03:27:51,046 INFO util.GSet: VM type       = 64-bit
+2026-10-11 03:27:51,047 INFO util.GSet: 1.0% max memory 896 MB = 9.0 MB
+2026-10-11 03:27:51,047 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+2026-10-11 03:27:51,123 INFO namenode.FSDirectory: ACLs enabled? true
+2026-10-11 03:27:51,124 INFO namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2026-10-11 03:27:51,124 INFO namenode.FSDirectory: XAttrs enabled? true
+2026-10-11 03:27:51,124 INFO namenode.NameNode: Caching file names occurring more than 10 times
+2026-10-11 03:27:51,140 INFO snapshot.SnapshotManager: Loaded config captureOpenFiles: false, 
+skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2026-10-11 03:27:51,143 INFO snapshot.SnapshotManager: SkipList is disabled
+2026-10-11 03:27:51,156 INFO util.GSet: Computing capacity for map cachedBlocks
+2026-10-11 03:27:51,156 INFO util.GSet: VM type       = 64-bit
+2026-10-11 03:27:51,157 INFO util.GSet: 0.25% max memory 896 MB = 2.2 MB
+2026-10-11 03:27:51,157 INFO util.GSet: capacity      = 2^18 = 262144 entries
+2026-10-11 03:27:51,180 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2026-10-11 03:27:51,180 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2026-10-11 03:27:51,180 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2026-10-11 03:27:51,198 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+2026-10-11 03:27:51,198 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry 
+expiry time is 600000 millis
+2026-10-11 03:27:51,204 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+2026-10-11 03:27:51,204 INFO util.GSet: VM type       = 64-bit
+2026-10-11 03:27:51,204 INFO util.GSet: 0.029999999329447746% max memory 896 MB = 275.3 KB
+2026-10-11 03:27:51,204 INFO util.GSet: capacity      = 2^15 = 32768 entries
+2026-10-11 03:27:51,305 INFO common.Storage: Lock on /hadoop/dfs/name/in_use.lock acquired by nodename 63@b976ee89e303
+2026-10-11 03:27:51,372 INFO namenode.FileJournalManager: Recovering unfinalized segments in /hadoop/dfs/name/current
+2026-10-11 03:27:51,373 INFO namenode.FSImage: No edit log streams selected.
+2026-10-11 03:27:51,373 INFO namenode.FSImage: Planning to load image: 
+FSImageFile(file=/hadoop/dfs/name/current/fsimage_0000000000000000000, cpktTxId=0000000000000000000)
+2026-10-11 03:27:51,657 INFO namenode.FSImageFormatPBINode: Loading 1 INodes.
+2026-10-11 03:27:51,679 INFO namenode.FSImageFormatPBINode: Successfully loaded 1 inodes
+2026-10-11 03:27:51,699 INFO namenode.FSImageFormatPBINode: Completed update blocks map and name cache, total waiting 
+duration 1ms.
+2026-10-11 03:27:51,712 INFO namenode.FSImageFormatProtobuf: Loaded FSImage in 0 seconds.
+2026-10-11 03:27:51,712 INFO namenode.FSImage: Loaded image for txid 0 from 
+/hadoop/dfs/name/current/fsimage_0000000000000000000
+2026-10-11 03:27:51,726 INFO namenode.FSNamesystem: Need to save fs image? false (staleImage=false, haEnabled=false, 
+isRollingUpgrade=false)
+2026-10-11 03:27:51,727 INFO namenode.FSEditLog: Starting log segment at 1
+2026-10-11 03:27:51,969 INFO namenode.NameCache: initialized with 0 entries 0 lookups
+2026-10-11 03:27:51,969 INFO namenode.FSNamesystem: Finished loading FSImage in 756 msecs
+2026-10-11 03:27:53,030 INFO namenode.NameNode: RPC server is binding to 0.0.0.0:8020
+2026-10-11 03:27:53,031 INFO namenode.NameNode: Enable NameNode state context:false
+2026-10-11 03:27:53,043 INFO ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, 
+queueCapacity: 1000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2026-10-11 03:27:53,060 INFO ipc.Server: Listener at 0.0.0.0:8020
+2026-10-11 03:27:53,062 INFO ipc.Server: Starting Socket Reader #1 for port 8020
+2026-10-11 03:27:53,187 INFO namenode.FSNamesystem: Registered FSNamesystemState, ReplicatedBlocksState and 
+ECBlockGroupsState MBeans.
+2026-10-11 03:27:53,190 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-11 03:27:53,268 INFO namenode.LeaseManager: Number of blocks under construction: 0
+2026-10-11 03:27:53,283 INFO blockmanagement.DatanodeAdminDefaultMonitor: Initialized the Default Decommission and 
+Maintenance monitor
+2026-10-11 03:27:53,297 INFO blockmanagement.BlockManager: Start MarkedDeleteBlockScrubber thread
+2026-10-11 03:27:53,301 INFO blockmanagement.BlockManager: initializing replication queues
+2026-10-11 03:27:53,302 INFO hdfs.StateChange: STATE* Leaving safe mode after 0 secs
+2026-10-11 03:27:53,303 INFO hdfs.StateChange: STATE* Network topology has 0 racks and 0 datanodes
+2026-10-11 03:27:53,303 INFO hdfs.StateChange: STATE* UnderReplicatedBlocks has 0 blocks
+2026-10-11 03:27:53,322 INFO blockmanagement.BlockManager: Total number of blocks            = 0
+2026-10-11 03:27:53,322 INFO blockmanagement.BlockManager: Number of invalid blocks          = 0
+2026-10-11 03:27:53,323 INFO blockmanagement.BlockManager: Number of under-replicated blocks = 0
+2026-10-11 03:27:53,323 INFO blockmanagement.BlockManager: Number of  over-replicated blocks = 0
+2026-10-11 03:27:53,323 INFO blockmanagement.BlockManager: Number of blocks being written    = 0
+2026-10-11 03:27:53,323 INFO hdfs.StateChange: STATE* Replication Queue initialization scan for invalid, over- and 
+under-replicated blocks completed in 16 msec
+2026-10-11 03:27:53,361 INFO ipc.Server: IPC Server Responder: starting
+2026-10-11 03:27:53,361 INFO ipc.Server: IPC Server listener on 8020: starting
+2026-10-11 03:27:53,389 INFO namenode.NameNode: NameNode RPC up at: namenode/172.23.0.2:8020
+2026-10-11 03:27:53,396 INFO namenode.FSNamesystem: Starting services required for active state
+2026-10-11 03:27:53,396 INFO namenode.FSDirectory: Initializing quota with 12 thread(s)
+2026-10-11 03:27:53,411 INFO namenode.FSDirectory: Quota initialization completed in 14 milliseconds
+name space=1
+storage space=0
+storage types=RAM_DISK=0, SSD=0, DISK=0, ARCHIVE=0, PROVIDED=0
+2026-10-11 03:27:53,421 INFO blockmanagement.CacheReplicationMonitor: Starting CacheReplicationMonitor with interval 
+30000 milliseconds
+2026-10-11 03:27:54,260 INFO ipc.Server: IPC Server handler 8 on default port 8020, call Call#8 Retry#0 
+org.apache.hadoop.hdfs.protocol.ClientProtocol.addBlock from resourcemanager.hadoop_network:56080 / 172.23.0.6:56080
+java.io.IOException: File /rmstate/FSRMStateRoot/RMVersionNode.tmp could only be written to 0 of the 1 minReplication 
+nodes. There are 0 datanode(s) running and 0 node(s) are excluded in this operation.
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.chooseTarget4NewBlock(BlockManager.java:2350)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirWriteFileOp.chooseTargetForNewBlock(FSDirWriteFileOp.java:294)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getAdditionalBlock(FSNamesystem.java:2989)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.addBlock(NameNodeRpcServer.java:912)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.addBlock(ClientNamenodeProtocolServe
+rSideTranslatorPB.java:595)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(Clie
+ntNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:621)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:589)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine2.java:573)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1227)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1094)
+	at org.apache.hadoop.ipc.Server$RpcCall.run(Server.java:1017)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:423)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1899)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:3048)
+2026-10-11 03:27:58,938 INFO hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(172.23.0.5:9866, 
+datanodeUuid=919bf9b2-618c-4fd6-964f-1d8b422c7777, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096) storage 
+919bf9b2-618c-4fd6-964f-1d8b422c7777
+2026-10-11 03:27:58,952 INFO net.NetworkTopology: Adding a new node: /default-rack/172.23.0.5:9866
+2026-10-11 03:27:58,954 INFO blockmanagement.BlockReportLeaseManager: Registered DN 
+919bf9b2-618c-4fd6-964f-1d8b422c7777 (172.23.0.5:9866).
+2026-10-11 03:27:58,966 INFO hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(172.23.0.4:9866, 
+datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096) storage 
+7b8dfb54-13e7-40f6-9df2-e120ba50a5d4
+2026-10-11 03:27:58,966 INFO net.NetworkTopology: Adding a new node: /default-rack/172.23.0.4:9866
+2026-10-11 03:27:58,968 INFO blockmanagement.BlockReportLeaseManager: Registered DN 
+7b8dfb54-13e7-40f6-9df2-e120ba50a5d4 (172.23.0.4:9866).
+2026-10-11 03:27:59,194 INFO hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(172.23.0.3:9866, 
+datanodeUuid=ec531a59-4f35-405b-ada9-ffec6b27f381, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096) storage 
+ec531a59-4f35-405b-ada9-ffec6b27f381
+2026-10-11 03:27:59,194 INFO net.NetworkTopology: Adding a new node: /default-rack/172.23.0.3:9866
+2026-10-11 03:27:59,194 INFO blockmanagement.BlockReportLeaseManager: Registered DN 
+ec531a59-4f35-405b-ada9-ffec6b27f381 (172.23.0.3:9866).
+2026-10-11 03:27:59,310 INFO blockmanagement.DatanodeDescriptor: Adding new storage ID 
+DS-5174ac15-fd9b-472f-ae75-f701903547da for DN 172.23.0.5:9866
+2026-10-11 03:27:59,313 INFO blockmanagement.DatanodeDescriptor: Adding new storage ID 
+DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 for DN 172.23.0.4:9866
+2026-10-11 03:27:59,403 INFO blockmanagement.DatanodeDescriptor: Adding new storage ID 
+DS-dcaaa9ac-1268-45a2-9643-b7dbb4de6c1b for DN 172.23.0.3:9866
+2026-10-11 03:27:59,508 INFO BlockStateChange: BLOCK* processReport 0xfa94e490cc1e4960 with lease ID 
+0xc432bfe2b4d8a8ff: Processing first storage report for DS-dcaaa9ac-1268-45a2-9643-b7dbb4de6c1b from datanode 
+DatanodeRegistration(172.23.0.3:9866, datanodeUuid=ec531a59-4f35-405b-ada9-ffec6b27f381, infoPort=9864, 
+infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096)
+2026-10-11 03:27:59,513 INFO BlockStateChange: BLOCK* processReport 0xfa94e490cc1e4960 with lease ID 
+0xc432bfe2b4d8a8ff: from storage DS-dcaaa9ac-1268-45a2-9643-b7dbb4de6c1b node DatanodeRegistration(172.23.0.3:9866, 
+datanodeUuid=ec531a59-4f35-405b-ada9-ffec6b27f381, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096), blocks: 0, 
+hasStaleStorage: false, processing time: 4 msecs, invalidatedBlocks: 0
+2026-10-11 03:27:59,515 INFO BlockStateChange: BLOCK* processReport 0x52fb341b86be981 with lease ID 
+0xc432bfe2b4d8a8fd: Processing first storage report for DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 from datanode 
+DatanodeRegistration(172.23.0.4:9866, datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, 
+infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096)
+2026-10-11 03:27:59,515 INFO BlockStateChange: BLOCK* processReport 0x52fb341b86be981 with lease ID 
+0xc432bfe2b4d8a8fd: from storage DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 node DatanodeRegistration(172.23.0.4:9866, 
+datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096), blocks: 0, 
+hasStaleStorage: false, processing time: 0 msecs, invalidatedBlocks: 0
+2026-10-11 03:27:59,515 INFO BlockStateChange: BLOCK* processReport 0x9216d9a05393089b with lease ID 
+0xc432bfe2b4d8a8fe: Processing first storage report for DS-5174ac15-fd9b-472f-ae75-f701903547da from datanode 
+DatanodeRegistration(172.23.0.5:9866, datanodeUuid=919bf9b2-618c-4fd6-964f-1d8b422c7777, infoPort=9864, 
+infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096)
+2026-10-11 03:27:59,516 INFO BlockStateChange: BLOCK* processReport 0x9216d9a05393089b with lease ID 
+0xc432bfe2b4d8a8fe: from storage DS-5174ac15-fd9b-472f-ae75-f701903547da node DatanodeRegistration(172.23.0.5:9866, 
+datanodeUuid=919bf9b2-618c-4fd6-964f-1d8b422c7777, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096), blocks: 0, 
+hasStaleStorage: false, processing time: 0 msecs, invalidatedBlocks: 0
+2026-10-11 03:28:11,418 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:28:11,466 INFO hdfs.StateChange: BLOCK* allocate blk_1073741825_1001, replicas=172.23.0.5:9866, 
+172.23.0.4:9866 for /rmstate/FSRMStateRoot/RMVersionNode.tmp
+2026-10-11 03:28:14,288 INFO namenode.FSNamesystem: BLOCK* blk_1073741825_1001 is COMMITTED but not COMPLETE(numNodes= 
+0 <  minimum = 1) in file /rmstate/FSRMStateRoot/RMVersionNode.tmp
+2026-10-11 03:28:14,739 INFO hdfs.StateChange: DIR* completeFile: /rmstate/FSRMStateRoot/RMVersionNode.tmp is closed 
+by DFSClient_NONMAPREDUCE_953358003_1
+2026-10-11 03:28:14,842 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:28:14,844 INFO hdfs.StateChange: BLOCK* allocate blk_1073741826_1002, replicas=172.23.0.4:9866, 
+172.23.0.3:9866 for /rmstate/FSRMStateRoot/EpochNode.tmp
+2026-10-11 03:28:16,093 INFO hdfs.StateChange: DIR* completeFile: /rmstate/FSRMStateRoot/EpochNode.tmp is closed by 
+DFSClient_NONMAPREDUCE_953358003_1
+2026-10-11 03:28:17,121 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:28:17,121 INFO hdfs.StateChange: BLOCK* allocate blk_1073741827_1003, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /rmstate/FSRMStateRoot/AMRMTokenSecretManagerRoot/AMRMTokenSecretManagerNode.tmp
+2026-10-11 03:28:17,181 INFO hdfs.StateChange: DIR* completeFile: 
+/rmstate/FSRMStateRoot/AMRMTokenSecretManagerRoot/AMRMTokenSecretManagerNode.tmp is closed by 
+DFSClient_NONMAPREDUCE_953358003_1
+2026-10-11 03:28:17,204 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:28:17,205 INFO hdfs.StateChange: BLOCK* allocate blk_1073741828_1004, replicas=172.23.0.5:9866, 
+172.23.0.3:9866 for /rmstate/FSRMStateRoot/RMDTSecretManagerRoot/DelegationKey_1.tmp
+2026-10-11 03:28:17,254 INFO hdfs.StateChange: DIR* completeFile: 
+/rmstate/FSRMStateRoot/RMDTSecretManagerRoot/DelegationKey_1.tmp is closed by DFSClient_NONMAPREDUCE_953358003_1
+2026-10-11 03:28:17,284 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:28:17,286 INFO hdfs.StateChange: BLOCK* allocate blk_1073741829_1005, replicas=172.23.0.3:9866, 
+172.23.0.5:9866 for /rmstate/FSRMStateRoot/RMDTSecretManagerRoot/DelegationKey_2.tmp
+2026-10-11 03:28:17,464 INFO hdfs.StateChange: DIR* completeFile: 
+/rmstate/FSRMStateRoot/RMDTSecretManagerRoot/DelegationKey_2.tmp is closed by DFSClient_NONMAPREDUCE_953358003_1
+2026-10-11 03:28:18,453 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:28:18,454 INFO hdfs.StateChange: BLOCK* allocate blk_1073741830_1006, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /rmstate/FSRMStateRoot/ProxyCARoot/caCert.tmp
+2026-10-11 03:28:18,493 INFO hdfs.StateChange: DIR* completeFile: /rmstate/FSRMStateRoot/ProxyCARoot/caCert.tmp is 
+closed by DFSClient_NONMAPREDUCE_953358003_1
+2026-10-11 03:28:18,512 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:28:18,513 INFO hdfs.StateChange: BLOCK* allocate blk_1073741831_1007, replicas=172.23.0.3:9866, 
+172.23.0.4:9866 for /rmstate/FSRMStateRoot/ProxyCARoot/caPrivateKey.tmp
+2026-10-11 03:28:18,726 INFO hdfs.StateChange: DIR* completeFile: /rmstate/FSRMStateRoot/ProxyCARoot/caPrivateKey.tmp 
+is closed by DFSClient_NONMAPREDUCE_953358003_1
+2026-10-11 03:41:50,907 INFO namenode.FSEditLog: Number of transactions: 53 Total time for transactions(ms): 133 
+Number of transactions batched in Syncs: 7 Number of syncs: 45 SyncTimes(ms): 102 
+2026-10-11 03:54:46,134 INFO namenode.FSEditLog: Number of transactions: 57 Total time for transactions(ms): 161 
+Number of transactions batched in Syncs: 8 Number of syncs: 49 SyncTimes(ms): 113 
+2026-10-11 03:54:46,337 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:54:46,348 INFO hdfs.StateChange: BLOCK* allocate blk_1073741832_1008, replicas=172.23.0.4:9866, 
+172.23.0.3:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-11 03:54:55,734 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:54:55,764 INFO hdfs.StateChange: BLOCK* allocate blk_1073741833_1009, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-11 03:55:04,762 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:55:04,793 INFO hdfs.StateChange: BLOCK* allocate blk_1073741834_1010, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-11 03:55:10,959 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:55:10,963 INFO hdfs.StateChange: BLOCK* allocate blk_1073741835_1011, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-11 03:55:16,080 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:55:16,082 INFO hdfs.StateChange: BLOCK* allocate blk_1073741836_1012, replicas=172.23.0.3:9866, 
+172.23.0.4:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-11 03:55:21,335 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:55:21,351 INFO hdfs.StateChange: BLOCK* allocate blk_1073741837_1013, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-11 03:55:26,569 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:55:26,582 INFO hdfs.StateChange: BLOCK* allocate blk_1073741838_1014, replicas=172.23.0.5:9866, 
+172.23.0.3:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-11 03:55:30,909 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 03:55:30,920 INFO hdfs.StateChange: BLOCK* allocate blk_1073741839_1015, replicas=172.23.0.4:9866, 
+172.23.0.3:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-11 03:55:33,672 INFO hdfs.StateChange: DIR* completeFile: /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_ 
+is closed by DFSClient_NONMAPREDUCE_2135160300_1
+2026-10-11 03:56:36,537 INFO namenode.NameNode: FSCK started by root (auth:SIMPLE) from /172.23.0.2 for path 
+/grupo04/dataset_1GB at Sun Oct 11 03:56:36 UTC 2026
+2026-10-11 04:00:48,245 INFO hdfs.StateChange: BLOCK* removeDeadDatanode: lost heartbeat from 172.23.0.4:9866, 
+removeBlocksFromBlockMap true
+2026-10-11 04:00:48,747 INFO net.NetworkTopology: Removing a node: /default-rack/172.23.0.4:9866
+2026-10-11 04:00:50,562 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:00:50,569 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:00:50,569 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:00:50,570 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:00:53,579 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:00:53,579 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:00:53,580 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:00:53,580 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:00:56,626 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:00:56,645 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:00:56,647 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:01:02,673 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:09:34,049 INFO hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(172.23.0.4:9866, 
+datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096) storage 
+7b8dfb54-13e7-40f6-9df2-e120ba50a5d4
+2026-10-11 04:09:34,081 INFO net.NetworkTopology: Removing a node: /default-rack/172.23.0.4:9866
+2026-10-11 04:09:34,100 INFO net.NetworkTopology: Adding a new node: /default-rack/172.23.0.4:9866
+2026-10-11 04:09:34,116 INFO blockmanagement.DatanodeDescriptor: 
+[DISK]DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3:NORMAL:172.23.0.4:9866 failed.
+2026-10-11 04:09:34,125 INFO blockmanagement.DatanodeDescriptor: Removed storage 
+[DISK]DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3:FAILED:172.23.0.4:9866 from DataNode 172.23.0.4:9866
+2026-10-11 04:09:34,236 INFO blockmanagement.DatanodeDescriptor: Adding new storage ID 
+DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 for DN 172.23.0.4:9866
+2026-10-11 04:09:34,243 WARN blockmanagement.BlockReportLeaseManager: DN 7b8dfb54-13e7-40f6-9df2-e120ba50a5d4 
+(172.23.0.4:9866) requested a lease even though it wasn't yet registered.  Registering now.
+2026-10-11 04:09:34,245 INFO blockmanagement.BlockReportLeaseManager: Registered DN 
+7b8dfb54-13e7-40f6-9df2-e120ba50a5d4 (172.23.0.4:9866).
+2026-10-11 04:09:34,385 INFO BlockStateChange: BLOCK* processReport 0xc9978b9af77c8958 with lease ID 
+0xc432bfe2b4d8a900: Processing first storage report for DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 from datanode 
+DatanodeRegistration(172.23.0.4:9866, datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, 
+infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096)
+2026-10-11 04:09:34,540 INFO BlockStateChange: BLOCK* processReport 0xc9978b9af77c8958 with lease ID 
+0xc432bfe2b4d8a900: from storage DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 node DatanodeRegistration(172.23.0.4:9866, 
+datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096), blocks: 12, 
+hasStaleStorage: false, processing time: 154 msecs, invalidatedBlocks: 0
+2026-10-11 04:09:35,735 INFO blockmanagement.BlockManager: Rescan of postponedMisreplicatedBlocks completed in 48 
+msecs. 0 blocks are left. 12 blocks were removed.
+2026-10-11 04:37:55,032 INFO namenode.NameNode: FSCK started by root (auth:SIMPLE) from /172.23.0.2 for path 
+/grupo04/dataset_1GB at Sun Oct 11 04:37:55 UTC 2026
+2026-10-11 04:41:53,630 INFO hdfs.StateChange: BLOCK* removeDeadDatanode: lost heartbeat from 172.23.0.4:9866, 
+removeBlocksFromBlockMap true
+2026-10-11 04:41:53,659 INFO net.NetworkTopology: Removing a node: /default-rack/172.23.0.4:9866
+2026-10-11 04:41:53,897 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:41:53,904 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:41:53,905 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:41:53,906 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:41:56,915 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:41:56,920 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:41:56,921 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:41:56,921 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:41:59,951 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:41:59,966 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:41:59,967 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:41:59,967 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 04:43:06,317 INFO namenode.NameNode: FSCK started by root (auth:SIMPLE) from /172.23.0.2 for path 
+/grupo04/dataset_1GB at Sun Oct 11 04:43:06 UTC 2026
+2026-10-11 04:51:16,451 INFO namenode.NameNode: FSCK started by root (auth:SIMPLE) from /172.23.0.2 for path 
+/grupo04/dataset_1GB at Sun Oct 11 04:51:16 UTC 2026
+2026-10-11 04:57:32,402 INFO hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(172.23.0.4:9866, 
+datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096) storage 
+7b8dfb54-13e7-40f6-9df2-e120ba50a5d4
+2026-10-11 04:57:32,476 INFO net.NetworkTopology: Removing a node: /default-rack/172.23.0.4:9866
+2026-10-11 04:57:32,510 INFO net.NetworkTopology: Adding a new node: /default-rack/172.23.0.4:9866
+2026-10-11 04:57:32,525 INFO blockmanagement.DatanodeDescriptor: 
+[DISK]DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3:NORMAL:172.23.0.4:9866 failed.
+2026-10-11 04:57:32,533 INFO blockmanagement.DatanodeDescriptor: Removed storage 
+[DISK]DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3:FAILED:172.23.0.4:9866 from DataNode 172.23.0.4:9866
+2026-10-11 04:57:32,744 INFO blockmanagement.DatanodeDescriptor: Adding new storage ID 
+DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 for DN 172.23.0.4:9866
+2026-10-11 04:57:32,755 WARN blockmanagement.BlockReportLeaseManager: DN 7b8dfb54-13e7-40f6-9df2-e120ba50a5d4 
+(172.23.0.4:9866) requested a lease even though it wasn't yet registered.  Registering now.
+2026-10-11 04:57:32,757 INFO blockmanagement.BlockReportLeaseManager: Registered DN 
+7b8dfb54-13e7-40f6-9df2-e120ba50a5d4 (172.23.0.4:9866).
+2026-10-11 04:57:32,905 INFO BlockStateChange: BLOCK* processReport 0x696769b15dabd9a4 with lease ID 
+0xc432bfe2b4d8a901: Processing first storage report for DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 from datanode 
+DatanodeRegistration(172.23.0.4:9866, datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, 
+infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096)
+2026-10-11 04:57:32,964 INFO BlockStateChange: BLOCK* processReport 0x696769b15dabd9a4 with lease ID 
+0xc432bfe2b4d8a901: from storage DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 node DatanodeRegistration(172.23.0.4:9866, 
+datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096), blocks: 12, 
+hasStaleStorage: false, processing time: 59 msecs, invalidatedBlocks: 0
+2026-10-11 04:57:33,055 INFO blockmanagement.BlockManager: Rescan of postponedMisreplicatedBlocks completed in 50 
+msecs. 0 blocks are left. 12 blocks were removed.
+2026-10-11 04:58:09,994 INFO namenode.NameNode: FSCK started by root (auth:SIMPLE) from /172.23.0.2 for path 
+/grupo04/dataset_1GB at Sun Oct 11 04:58:09 UTC 2026
+2026-10-11 04:58:53,594 INFO namenode.FSEditLog: Number of transactions: 84 Total time for transactions(ms): 201 
+Number of transactions batched in Syncs: 19 Number of syncs: 65 SyncTimes(ms): 344 
+2026-10-11 05:02:57,526 INFO namenode.FSEditLog: Number of transactions: 85 Total time for transactions(ms): 227 
+Number of transactions batched in Syncs: 19 Number of syncs: 66 SyncTimes(ms): 350 
+2026-10-11 05:02:57,618 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 05:02:57,672 INFO hdfs.StateChange: BLOCK* allocate blk_1073741840_1016, replicas=172.23.0.3:9866, 
+172.23.0.5:9866 for /grupo04/evidencias/fsck_1GB_antes.txt._COPYING_
+2026-10-11 05:02:58,516 INFO hdfs.StateChange: DIR* completeFile: /grupo04/evidencias/fsck_1GB_antes.txt._COPYING_ is 
+closed by DFSClient_NONMAPREDUCE_-1874012553_1
+2026-10-11 05:02:58,593 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 05:02:58,595 INFO hdfs.StateChange: BLOCK* allocate blk_1073741841_1017, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /grupo04/evidencias/fsck_1GB_despues_falla.txt._COPYING_
+2026-10-11 05:03:00,017 INFO hdfs.StateChange: DIR* completeFile: 
+/grupo04/evidencias/fsck_1GB_despues_falla.txt._COPYING_ is closed by DFSClient_NONMAPREDUCE_-1874012553_1
+2026-10-11 05:03:00,059 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 05:03:00,060 INFO hdfs.StateChange: BLOCK* allocate blk_1073741842_1018, replicas=172.23.0.3:9866, 
+172.23.0.5:9866 for /grupo04/evidencias/fsck_1GB_durante.txt._COPYING_
+2026-10-11 05:03:00,113 INFO hdfs.StateChange: DIR* completeFile: /grupo04/evidencias/fsck_1GB_durante.txt._COPYING_ 
+is closed by DFSClient_NONMAPREDUCE_-1874012553_1
+2026-10-11 05:03:00,148 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 05:03:00,149 INFO hdfs.StateChange: BLOCK* allocate blk_1073741843_1019, replicas=172.23.0.3:9866, 
+172.23.0.5:9866 for /grupo04/evidencias/fsck_1GB_final.txt._COPYING_
+remove lost+found from /hadoop/dfs/name
+2026-10-11 05:03:00,186 INFO hdfs.StateChange: DIR* completeFile: /grupo04/evidencias/fsck_1GB_final.txt._COPYING_ is 
+closed by DFSClient_NONMAPREDUCE_-1874012553_1
+2026-10-11 05:04:09,622 INFO namenode.FSEditLog: Number of transactions: 109 Total time for transactions(ms): 261 
+Number of transactions batched in Syncs: 22 Number of syncs: 87 SyncTimes(ms): 375 
+2026-10-11 05:04:09,749 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 05:04:09,759 INFO hdfs.StateChange: BLOCK* allocate blk_1073741844_1020, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /grupo04/evidencias/fsck_1GB_antes.txt._COPYING_
+2026-10-11 05:04:10,289 INFO hdfs.StateChange: DIR* completeFile: /grupo04/evidencias/fsck_1GB_antes.txt._COPYING_ is 
+closed by DFSClient_NONMAPREDUCE_1677863219_1
+2026-10-11 05:04:10,742 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 05:04:10,742 INFO hdfs.StateChange: BLOCK* allocate blk_1073741845_1021, replicas=172.23.0.3:9866, 
+172.23.0.4:9866 for /grupo04/evidencias/fsck_1GB_despues_falla.txt._COPYING_
+2026-10-11 05:04:11,066 INFO hdfs.StateChange: DIR* completeFile: 
+/grupo04/evidencias/fsck_1GB_despues_falla.txt._COPYING_ is closed by DFSClient_NONMAPREDUCE_1677863219_1
+2026-10-11 05:04:11,115 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 05:04:11,117 INFO hdfs.StateChange: BLOCK* allocate blk_1073741846_1022, replicas=172.23.0.3:9866, 
+172.23.0.4:9866 for /grupo04/evidencias/fsck_1GB_durante.txt._COPYING_
+2026-10-11 05:04:11,163 INFO hdfs.StateChange: DIR* completeFile: /grupo04/evidencias/fsck_1GB_durante.txt._COPYING_ 
+is closed by DFSClient_NONMAPREDUCE_1677863219_1
+2026-10-11 05:04:11,270 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-11 05:04:11,271 INFO hdfs.StateChange: BLOCK* allocate blk_1073741847_1023, replicas=172.23.0.5:9866, 
+172.23.0.3:9866 for /grupo04/evidencias/fsck_1GB_final.txt._COPYING_
+2026-10-11 05:04:11,493 INFO hdfs.StateChange: DIR* completeFile: /grupo04/evidencias/fsck_1GB_final.txt._COPYING_ is 
+closed by DFSClient_NONMAPREDUCE_1677863219_1
+2026-10-11 05:08:54,290 INFO util.JvmPauseMonitor: Detected pause in JVM or host machine (eg GC): pause of 
+approximately 3477ms
+No GCs detected
+rm: cannot remove '/hadoop/dfs/name/lost+found': No such file or directory
+WARNING: HADOOP_PREFIX has been replaced by HADOOP_HOME. Using value of HADOOP_PREFIX.
+2026-10-12 03:23:23,147 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = b976ee89e303/172.23.0.3
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 3.3.6
+STARTUP_MSG:   classpath = /etc/hadoop:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-native-epoll-4.1.89.Fi
+nal-linux-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/guava-27.0-jre.jar:/opt/hadoop-3.3.6/share/hadoop/comm
+on/lib/netty-all-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jsr305-3.0.2.jar:/opt/hadoop-3.3.6/share/ha
+doop/common/lib/netty-codec-socks-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-core-1.0.1.jar:/opt/h
+adoop-3.3.6/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-util-1.0.1.jar
+:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-servlet-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib
+/audience-annotations-0.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-common-1.0.1.jar:/opt/hadoop-3.3.6/share
+/hadoop/common/lib/zookeeper-jute-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/opt/hado
+op-3.3.6/share/hadoop/common/lib/netty-transport-sctp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-
+xdr-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/failureaccess-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib
+/netty-codec-http-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-4.1.89.Final.jar:/opt/hadoop-3
+.3.6/share/hadoop/common/lib/netty-handler-proxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-mat
+h3-3.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/j2objc-annotations-1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common
+/lib/animal-sniffer-annotations-1.17.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-handler-4.1.89.Final.jar:/opt/
+hadoop-3.3.6/share/hadoop/common/lib/metrics-core-3.2.4.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-io-2.8.0.
+jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-rxtx-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/comm
+on/lib/jsch-0.1.55.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-server-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoo
+p/common/lib/jcip-annotations-1.0-1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/opt/hadoop-3.3.
+6/share/hadoop/common/lib/netty-buffer-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-resolver-dns-4.
+1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-core-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/common/l
+ib/token-provider-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-net-3.9.0.jar:/opt/hadoop-3.3.6/share/had
+oop/common/lib/commons-beanutils-1.9.4.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-classes-kqueue-4.1
+.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/hadoop-shaded-guava-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/co
+mmon/lib/jakarta.activation-api-1.2.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/reload4j-1.2.22.jar:/opt/hadoop-3.3
+.6/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-http-9.4.51.v202
+30217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-dns-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/com
+mon/lib/zookeeper-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-logging-1.1.3.jar:/opt/hadoop-3.3.6/share
+/hadoop/common/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/checker-qual-2.5.2.ja
+r:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-xml-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/sn
+appy-java-1.1.8.2.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-stomp-4.1.89.Final.jar:/opt/hadoop-3.3.6/sh
+are/hadoop/common/lib/netty-handler-ssl-ocsp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-daemon-
+1.0.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-xml-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/co
+mmon/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/paranamer-2.3.jar:/opt/hadoop-3.3.6/sh
+are/hadoop/common/lib/netty-resolver-dns-native-macos-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/common
+/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-config-1.0.1.jar:/opt/hadoop-3.3.6/sha
+re/hadoop/common/lib/netty-transport-native-kqueue-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/li
+b/jsr311-api-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-smtp-4.1.89.Final.jar:/opt/hadoop-3.3.6/sh
+are/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/hadoop-auth-3.3.6.jar:/opt/had
+oop-3.3.6/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-compress-1.
+21.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-redis-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/comm
+on/lib/netty-transport-native-kqueue-4.1.89.Final-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-cl
+i-1.2.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-codec-1.15.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/ne
+tty-transport-native-epoll-4.1.89.Final-linux-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jsp-api-2.1.jar:/opt
+/hadoop-3.3.6/share/hadoop/common/lib/jetty-server-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jaxb-
+impl-2.2.3-1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop
+/common/lib/jackson-annotations-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jettison-1.5.4.jar:/opt/hadoop-3.3
+.6/share/hadoop/common/lib/kerby-util-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar:/op
+t/hadoop-3.3.6/share/hadoop/common/lib/jackson-core-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerb-client-1.
+0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-udt-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/c
+ommon/lib/kerb-server-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/avro-1.7.7.jar:/opt/hadoop-3.3.6/share/hadoop
+/common/lib/netty-resolver-dns-native-macos-4.1.89.Final-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/net
+ty-transport-native-unix-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/hadoop-annotations-3.3.6.jar
+:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-util-ajax-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/l
+ib/stax2-api-4.2.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-g
+uava.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/curator-framework-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/li
+b/curator-client-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-util-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/
+share/hadoop/common/lib/jetty-webapp-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-asn1-1.0.1.ja
+r:/opt/hadoop-3.3.6/share/hadoop/common/lib/httpclient-4.5.13.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-json
+-1.20.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-lang3-3.12.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/
+netty-codec-http2-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jersey-servlet-1.19.4.jar:/opt/hadoop-3.3.
+6/share/hadoop/common/lib/netty-codec-mqtt-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/httpcore-4.4.13.j
+ar:/opt/hadoop-3.3.6/share/hadoop/common/lib/curator-recipes-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-
+resolver-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/woodstox-core-5.4.0.jar:/opt/hadoop-3.3.6/share/had
+oop/common/lib/commons-text-1.10.0.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/gson-2.9.0.jar:/opt/hadoop-3.3.6/share
+/hadoop/common/lib/re2j-1.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-memcache-4.1.89.Final.jar:/opt/ha
+doop-3.3.6/share/hadoop/common/lib/jackson-databind-2.12.7.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/nimbus-jose-
+jwt-9.8.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jetty-security-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/had
+oop/common/lib/netty-resolver-dns-classes-macos-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/kerby-pkix-1
+.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-codec-haproxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/
+common/lib/jaxb-api-2.2.11.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-configuration2-2.8.0.jar:/opt/hadoop-3
+.3.6/share/hadoop/common/lib/jetty-io-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/jul-to-slf4j-1.7.3
+6.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/slf4j-api-1.7.36.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/commons-
+collections-3.2.2.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-4.1.89.Final.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/common/lib/dnsjava-2.1.7.jar:/opt/hadoop-3.3.6/share/hadoop/common/lib/netty-transport-classes-epoll-4.1.89.Fi
+nal.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-kms-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-common-
+3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-nfs-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-commo
+n-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/common/hadoop-registry-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs:/
+opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-native-epoll-4.1.89.Final-linux-aarch_64.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/hdfs/lib/guava-27.0-jre.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-all-4.1.89.Final.jar:/opt/hadoop-
+3.3.6/share/hadoop/hdfs/lib/jsr305-3.0.2.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-socks-4.1.89.Final.jar
+:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/HikariCP-java7-2.4
+.12.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-util
+-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-servlet-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hd
+fs/lib/audience-annotations-0.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/hdfs/lib/zookeeper-jute-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/opt/hado
+op-3.3.6/share/hadoop/hdfs/lib/netty-transport-sctp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-xdr-
+1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/failureaccess-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-c
+odec-http-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-4.1.89.Final.jar:/opt/hadoop-3.3.6/share
+/hadoop/hdfs/lib/netty-handler-proxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/
+opt/hadoop-3.3.6/share/hadoop/hdfs/lib/j2objc-annotations-1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/animal-sniffe
+r-annotations-1.17.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-handler-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/h
+adoop/hdfs/lib/netty-3.10.6.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/metrics-core-3.2.4.jar:/opt/hadoop-3.3.6/
+share/hadoop/hdfs/lib/commons-io-2.8.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-rxtx-4.1.89.Final.ja
+r:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jsch-0.1.55.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-server-1.19.4.
+jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-adm
+in-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-buffer-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/
+lib/netty-resolver-dns-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-core-1.19.4.jar:/opt/hadoop-3.3.
+6/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-net-3.9.0.jar:/opt/had
+oop-3.3.6/share/hadoop/hdfs/lib/commons-beanutils-1.9.4.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-cla
+sses-kqueue-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/okio-2.8.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs
+/lib/hadoop-shaded-guava-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jakarta.activation-api-1.2.1.jar:/opt/hadoop
+-3.3.6/share/hadoop/hdfs/lib/reload4j-1.2.22.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/o
+pt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-http-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/json-simp
+le-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-dns-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hd
+fs/lib/zookeeper-3.6.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/opt/hadoop-3.3.6/share/ha
+doop/hdfs/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/checker-qual-2.5.2.jar:/opt/
+hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-xml-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/snappy-java-1
+.1.8.2.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-stomp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hd
+fs/lib/netty-handler-ssl-ocsp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/opt/h
+adoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-xml-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-mapp
+er-asl-1.9.13.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/paranamer-2.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/net
+ty-resolver-dns-native-macos-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-core-asl-1.9.1
+3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-tran
+sport-native-kqueue-4.1.89.Final-osx-x86_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/opt/hadoo
+p-3.3.6/share/hadoop/hdfs/lib/netty-codec-smtp-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerb-simplekdc-
+1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/hadoop-auth-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/protobu
+f-java-2.5.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-compress-1.21.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/
+lib/netty-codec-redis-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-native-kqueue-4.1.89.Fin
+al-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib
+/commons-codec-1.15.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-native-epoll-4.1.89.Final-linux-x86_64.
+jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-server-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/j
+axb-impl-2.2.3-1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hado
+op/hdfs/lib/jackson-annotations-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jettison-1.5.4.jar:/opt/hadoop-3.3.6
+/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-core-2.12.7.jar:/opt/hadoop
+-3.3.6/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-udt-4.1.89.F
+inal.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kotlin-stdlib-common-1.4.10.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/li
+b/kerb-server-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/avro-1.7.7.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/
+netty-resolver-dns-native-macos-4.1.89.Final-osx-aarch_64.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-n
+ative-unix-common-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/hadoop-annotations-3.3.6.jar:/opt/hadoop-3.3
+.6/share/hadoop/hdfs/lib/jetty-util-ajax-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/stax2-api-4.2.1.j
+ar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/opt/hadoop-3
+.3.6/share/hadoop/hdfs/lib/curator-framework-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/curator-client-5.2.0.jar
+:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-util-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-
+webapp-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/opt/hadoop-3.3.6/share/hadoop
+/hdfs/lib/httpclient-4.5.13.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-json-1.20.jar:/opt/hadoop-3.3.6/share/ha
+doop/hdfs/lib/commons-lang3-3.12.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-http2-4.1.89.Final.jar:/opt/
+hadoop-3.3.6/share/hadoop/hdfs/lib/jersey-servlet-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-mqtt-4
+.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/okhttp-4.9.3.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/httpco
+re-4.4.13.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/curator-recipes-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib
+/netty-resolver-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/woodstox-core-5.4.0.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/hdfs/lib/commons-text-1.10.0.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/gson-2.9.0.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/hdfs/lib/kotlin-stdlib-1.4.10.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/re2j-1.1.jar:/opt/hadoop-3.3.6/share
+/hadoop/hdfs/lib/netty-codec-memcache-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/
+opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jackson-databind-2.12.7.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/nimbus-jos
+e-jwt-9.8.1.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/jetty-security-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/had
+oop/hdfs/lib/netty-resolver-dns-classes-macos-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/kerby-pkix-1.0.1
+.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-codec-haproxy-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/l
+ib/jaxb-api-2.2.11.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-configuration2-2.8.0.jar:/opt/hadoop-3.3.6/share
+/hadoop/hdfs/lib/jetty-io-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/o
+pt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-4.1.89.Final.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/dnsjava-
+2.1.7.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/lib/netty-transport-classes-epoll-4.1.89.Final.jar:/opt/hadoop-3.3.6/shar
+e/hadoop/hdfs/hadoop-hdfs-client-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-native-client-3.3.6.jar:/opt
+/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-client-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-3.3.
+6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-native-client-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs
+/hadoop-hdfs-nfs-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-rbf-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop
+/hdfs/hadoop-hdfs-rbf-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.3.6.jar:/opt/hadoop-3.3.
+6/share/hadoop/hdfs/hadoop-hdfs-3.3.6-tests.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-native
+task-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.3.6.jar:/opt/hadoop-3.3.6/sha
+re/hadoop/mapreduce/hadoop-mapreduce-client-app-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-cli
+ent-uploader-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.6.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapre
+duce-client-hs-plugins-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.3.6.jar:/opt/had
+oop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop
+-mapreduce-client-common-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.3.6-tes
+ts.jar:/opt/hadoop-3.3.6/share/hadoop/yarn:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jetty-plus-9.4.51.v20230217.jar:/opt
+/hadoop-3.3.6/share/hadoop/yarn/lib/java-util-1.9.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/javax.websocket-client-
+api-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jline-3.9.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jetty-annot
+ations-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/websocket-api-9.4.51.v20230217.jar:/opt/hadoop-3.3.
+6/share/hadoop/yarn/lib/bcprov-jdk15on-1.68.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/fst-2.50.jar:/opt/hadoop-3.3.6/
+share/hadoop/yarn/lib/snakeyaml-2.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/json-io-2.5.1.jar:/opt/hadoop-3.3.6/sha
+re/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/opt
+/hadoop-3.3.6/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/aopalliance-1.0.jar:/opt/
+hadoop-3.3.6/share/hadoop/yarn/lib/javax-websocket-client-impl-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn
+/lib/jakarta.xml.bind-api-2.3.2.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jna-5.2.0.jar:/opt/hadoop-3.3.6/share/hadoo
+p/yarn/lib/jetty-client-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/websocket-servlet-9.4.51.v20230217
+.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/javax.websocket-api-1.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jersey
+-client-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jersey-guice-1.19.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/
+lib/websocket-client-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/bcpkix-jdk15on-1.68.jar:/opt/hadoop-3
+.3.6/share/hadoop/yarn/lib/websocket-common-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jackson-jaxrs-
+json-provider-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/opt/hadoop-3
+.3.6/share/hadoop/yarn/lib/asm-tree-9.4.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/javax.inject-1.jar:/opt/hadoop-3.3.
+6/share/hadoop/yarn/lib/websocket-server-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jetty-jndi-9.4.51
+.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/ob
+jenesis-2.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/jackson-jaxrs-base-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/ya
+rn/lib/jackson-module-jaxb-annotations-2.12.7.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib/asm-commons-9.4.jar:/opt/hado
+op-3.3.6/share/hadoop/yarn/lib/javax-websocket-server-impl-9.4.51.v20230217.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/lib
+/guice-4.0.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-router-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/y
+arn/hadoop-yarn-server-tests-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launch
+er-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.3.6.jar:/opt/hadoop-3.3.6/
+share/hadoop/yarn/hadoop-yarn-services-core-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-applications-mawo
+-core-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.3.6.jar:/opt/hadoop-3.3.6/s
+hare/hadoop/yarn/hadoop-yarn-client-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-api-3.3.6.jar:/opt/hadoop
+-3.3.6/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/had
+oop-yarn-services-api-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.3.6.jar:/opt/hadoo
+p-3.3.6/share/hadoop/yarn/hadoop-yarn-common-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-common-3.
+3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop
+/yarn/hadoop-yarn-server-timeline-pluginstorage-3.3.6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-registry-3.3.
+6.jar:/opt/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.3.6.jar
+STARTUP_MSG:   build = https://github.com/apache/hadoop.git -r 1be78238728da9266a4f88195058f08fd012bf9c; compiled by 
+'ubuntu' on 2023-06-18T08:22Z
+STARTUP_MSG:   java = 11.0.32.1
+************************************************************/
+2026-10-12 03:23:23,158 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2026-10-12 03:23:23,381 INFO namenode.NameNode: createNameNode []
+2026-10-12 03:23:23,888 INFO impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2026-10-12 03:23:24,380 INFO impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2026-10-12 03:23:24,380 INFO impl.MetricsSystemImpl: NameNode metrics system started
+2026-10-12 03:23:24,423 INFO namenode.NameNodeUtils: fs.defaultFS is hdfs://namenode:8020
+2026-10-12 03:23:24,423 INFO namenode.NameNode: Clients should use namenode:8020 to access this namenode/service.
+2026-10-12 03:23:25,056 INFO util.JvmPauseMonitor: Starting JVM pause monitor
+2026-10-12 03:23:25,121 INFO hdfs.DFSUtil: Filter initializers set : 
+org.apache.hadoop.http.lib.StaticUserWebFilter,org.apache.hadoop.hdfs.web.AuthFilterInitializer
+2026-10-12 03:23:25,131 INFO hdfs.DFSUtil: Starting Web-server for hdfs at: http://0.0.0.0:9870
+2026-10-12 03:23:25,168 INFO util.log: Logging initialized @3011ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-12 03:23:25,405 WARN server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back 
+to use random secrets. Reason: Could not read signature secret file: /root/hadoop-http-auth-signature-secret
+2026-10-12 03:23:25,461 INFO http.HttpRequestLog: Http request log for http.requests.namenode is not defined
+2026-10-12 03:23:25,493 INFO http.HttpServer2: Added global filter 'safety' 
+(class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2026-10-12 03:23:25,512 INFO http.HttpServer2: Added filter static_user_filter 
+(class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context hdfs
+2026-10-12 03:23:25,513 INFO http.HttpServer2: Added filter static_user_filter 
+(class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2026-10-12 03:23:25,513 INFO http.HttpServer2: Added filter static_user_filter 
+(class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2026-10-12 03:23:25,533 INFO http.HttpServer2: Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) 
+to context hdfs
+2026-10-12 03:23:25,534 INFO http.HttpServer2: Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) 
+to context logs
+2026-10-12 03:23:25,534 INFO http.HttpServer2: Added filter AuthFilter (class=org.apache.hadoop.hdfs.web.AuthFilter) 
+to context static
+2026-10-12 03:23:25,782 INFO http.HttpServer2: addJerseyResourcePackage: 
+packageName=org.apache.hadoop.hdfs.server.namenode.web.resources;org.apache.hadoop.hdfs.web.resources, 
+pathSpec=/webhdfs/v1/*
+2026-10-12 03:23:25,826 INFO http.HttpServer2: Jetty bound to port 9870
+2026-10-12 03:23:25,828 INFO server.Server: jetty-9.4.51.v20230217; built: 2023-02-17T08:19:37.309Z; git: 
+b45c405e4544384de066f814ed42ae3dceacdd49; jvm 11.0.32.1+1
+2026-10-12 03:23:26,024 INFO server.session: DefaultSessionIdManager workerName=node0
+2026-10-12 03:23:26,048 INFO server.session: No SessionScavenger set, using defaults
+2026-10-12 03:23:26,051 INFO server.session: node0 Scavenging every 600000ms
+2026-10-12 03:23:26,122 WARN server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back 
+to use random secrets. Reason: Could not read signature secret file: /root/hadoop-http-auth-signature-secret
+2026-10-12 03:23:26,129 INFO handler.ContextHandler: Started 
+o.e.j.s.ServletContextHandler@207b8649{logs,/logs,file:///opt/hadoop-3.3.6/logs/,AVAILABLE}
+2026-10-12 03:23:26,136 INFO handler.ContextHandler: Started o.e.j.s.ServletContextHandler@2cae1042{static,/static,file
+:///opt/hadoop-3.3.6/share/hadoop/hdfs/webapps/static/,AVAILABLE}
+2026-10-12 03:23:26,645 INFO handler.ContextHandler: Started o.e.j.w.WebAppContext@410954b{hdfs,/,file:///opt/hadoop-3.
+3.6/share/hadoop/hdfs/webapps/hdfs/,AVAILABLE}{file:/opt/hadoop-3.3.6/share/hadoop/hdfs/webapps/hdfs}
+2026-10-12 03:23:26,666 INFO server.AbstractConnector: Started ServerConnector@3918c187{HTTP/1.1, 
+(http/1.1)}{0.0.0.0:9870}
+2026-10-12 03:23:26,667 INFO server.Server: Started @4510ms
+2026-10-12 03:23:27,265 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-12 03:23:27,266 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-12 03:23:27,267 WARN namenode.FSNamesystem: Only one image storage directory (dfs.namenode.name.dir) 
+configured. Beware of data loss due to lack of redundant storage directories!
+2026-10-12 03:23:27,267 WARN namenode.FSNamesystem: Only one namespace edits storage directory 
+(dfs.namenode.edits.dir) configured. Beware of data loss due to lack of redundant storage directories!
+2026-10-12 03:23:27,296 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-12 03:23:27,297 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-12 03:23:27,565 INFO namenode.FSEditLog: Edit logging is async:true
+2026-10-12 03:23:27,751 INFO namenode.FSNamesystem: KeyProvider: null
+2026-10-12 03:23:27,771 INFO namenode.FSNamesystem: fsLock is fair: true
+2026-10-12 03:23:27,771 INFO namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2026-10-12 03:23:27,813 INFO namenode.FSNamesystem: fsOwner                = root (auth:SIMPLE)
+2026-10-12 03:23:27,813 INFO namenode.FSNamesystem: supergroup             = supergroup
+2026-10-12 03:23:27,813 INFO namenode.FSNamesystem: isPermissionEnabled    = false
+2026-10-12 03:23:27,813 INFO namenode.FSNamesystem: isStoragePolicyEnabled = true
+2026-10-12 03:23:27,814 INFO namenode.FSNamesystem: HA Enabled: false
+2026-10-12 03:23:27,961 INFO common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file 
+IO profiling
+2026-10-12 03:23:28,644 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit : configured=1000, 
+counted=60, effected=1000
+2026-10-12 03:23:28,645 INFO blockmanagement.DatanodeManager: 
+dfs.namenode.datanode.registration.ip-hostname-check=false
+2026-10-12 03:23:28,656 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 
+000:00:00:00.000
+2026-10-12 03:23:28,659 INFO blockmanagement.BlockManager: The block deletion will start around 2026 Oct 12 03:23:28
+2026-10-12 03:23:28,664 INFO util.GSet: Computing capacity for map BlocksMap
+2026-10-12 03:23:28,666 INFO util.GSet: VM type       = 64-bit
+2026-10-12 03:23:28,668 INFO util.GSet: 2.0% max memory 896 MB = 17.9 MB
+2026-10-12 03:23:28,669 INFO util.GSet: capacity      = 2^21 = 2097152 entries
+2026-10-12 03:23:28,695 INFO blockmanagement.BlockManager: Storage policy satisfier is disabled
+2026-10-12 03:23:28,695 INFO blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2026-10-12 03:23:28,724 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.999
+2026-10-12 03:23:28,724 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2026-10-12 03:23:28,727 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2026-10-12 03:23:28,729 INFO blockmanagement.BlockManager: defaultReplication         = 2
+2026-10-12 03:23:28,729 INFO blockmanagement.BlockManager: maxReplication             = 512
+2026-10-12 03:23:28,730 INFO blockmanagement.BlockManager: minReplication             = 1
+2026-10-12 03:23:28,730 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+2026-10-12 03:23:28,730 INFO blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2026-10-12 03:23:28,730 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+2026-10-12 03:23:28,730 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2026-10-12 03:23:28,890 INFO namenode.FSDirectory: GLOBAL serial map: bits=29 maxEntries=536870911
+2026-10-12 03:23:28,890 INFO namenode.FSDirectory: USER serial map: bits=24 maxEntries=16777215
+2026-10-12 03:23:28,890 INFO namenode.FSDirectory: GROUP serial map: bits=24 maxEntries=16777215
+2026-10-12 03:23:28,890 INFO namenode.FSDirectory: XATTR serial map: bits=24 maxEntries=16777215
+2026-10-12 03:23:28,970 INFO util.GSet: Computing capacity for map INodeMap
+2026-10-12 03:23:28,970 INFO util.GSet: VM type       = 64-bit
+2026-10-12 03:23:28,970 INFO util.GSet: 1.0% max memory 896 MB = 9.0 MB
+2026-10-12 03:23:28,970 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+2026-10-12 03:23:29,004 INFO namenode.FSDirectory: ACLs enabled? true
+2026-10-12 03:23:29,005 INFO namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2026-10-12 03:23:29,005 INFO namenode.FSDirectory: XAttrs enabled? true
+2026-10-12 03:23:29,010 INFO namenode.NameNode: Caching file names occurring more than 10 times
+2026-10-12 03:23:29,026 INFO snapshot.SnapshotManager: Loaded config captureOpenFiles: false, 
+skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2026-10-12 03:23:29,030 INFO snapshot.SnapshotManager: SkipList is disabled
+2026-10-12 03:23:29,057 INFO util.GSet: Computing capacity for map cachedBlocks
+2026-10-12 03:23:29,057 INFO util.GSet: VM type       = 64-bit
+2026-10-12 03:23:29,057 INFO util.GSet: 0.25% max memory 896 MB = 2.2 MB
+2026-10-12 03:23:29,057 INFO util.GSet: capacity      = 2^18 = 262144 entries
+2026-10-12 03:23:29,285 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2026-10-12 03:23:29,285 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2026-10-12 03:23:29,285 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2026-10-12 03:23:29,324 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+2026-10-12 03:23:29,324 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry 
+expiry time is 600000 millis
+2026-10-12 03:23:29,329 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+2026-10-12 03:23:29,329 INFO util.GSet: VM type       = 64-bit
+2026-10-12 03:23:29,330 INFO util.GSet: 0.029999999329447746% max memory 896 MB = 275.3 KB
+2026-10-12 03:23:29,330 INFO util.GSet: capacity      = 2^15 = 32768 entries
+2026-10-12 03:23:29,391 INFO common.Storage: Lock on /hadoop/dfs/name/in_use.lock acquired by nodename 13@b976ee89e303
+2026-10-12 03:23:29,439 INFO namenode.FileJournalManager: Recovering unfinalized segments in /hadoop/dfs/name/current
+2026-10-12 03:23:29,498 INFO namenode.FileJournalManager: Finalizing edits file 
+/hadoop/dfs/name/current/edits_inprogress_0000000000000000001 -> 
+/hadoop/dfs/name/current/edits_0000000000000000001-0000000000000000136
+2026-10-12 03:23:29,542 INFO namenode.FSImage: Planning to load image: 
+FSImageFile(file=/hadoop/dfs/name/current/fsimage_0000000000000000000, cpktTxId=0000000000000000000)
+2026-10-12 03:23:29,778 INFO namenode.FSImageFormatPBINode: Loading 1 INodes.
+2026-10-12 03:23:29,801 INFO namenode.FSImageFormatPBINode: Successfully loaded 1 inodes
+2026-10-12 03:23:29,816 INFO namenode.FSImageFormatPBINode: Completed update blocks map and name cache, total waiting 
+duration 0ms.
+2026-10-12 03:23:29,896 INFO namenode.FSImageFormatProtobuf: Loaded FSImage in 0 seconds.
+2026-10-12 03:23:29,907 INFO namenode.FSImage: Loaded image for txid 0 from 
+/hadoop/dfs/name/current/fsimage_0000000000000000000
+2026-10-12 03:23:29,916 INFO namenode.FSImage: Reading 
+org.apache.hadoop.hdfs.server.namenode.RedundantEditLogInputStream@c1fa7d4 expecting start txid #1
+2026-10-12 03:23:29,917 INFO namenode.FSImage: Start loading edits file 
+/hadoop/dfs/name/current/edits_0000000000000000001-0000000000000000136 maxTxnsToRead = 9223372036854775807
+2026-10-12 03:23:29,920 INFO namenode.RedundantEditLogInputStream: Fast-forwarding stream 
+'/hadoop/dfs/name/current/edits_0000000000000000001-0000000000000000136' to transaction ID 1
+2026-10-12 03:23:30,221 INFO namenode.FSImage: Loaded 1 edits file(s) (the last named 
+/hadoop/dfs/name/current/edits_0000000000000000001-0000000000000000136) of total size 1048576.0, total edits 136.0, 
+total load time 235.0 ms
+2026-10-12 03:23:30,222 INFO namenode.FSNamesystem: Need to save fs image? true (staleImage=true, haEnabled=false, 
+isRollingUpgrade=false)
+2026-10-12 03:23:30,222 INFO namenode.FSImage: Save namespace ...
+2026-10-12 03:23:30,306 INFO namenode.FSImageFormatProtobuf: Saving image file 
+/hadoop/dfs/name/current/fsimage.ckpt_0000000000000000136 using no compression
+2026-10-12 03:23:30,907 INFO namenode.FSImageFormatProtobuf: Image file 
+/hadoop/dfs/name/current/fsimage.ckpt_0000000000000000136 of size 2325 bytes saved in 0 seconds .
+2026-10-12 03:23:30,933 INFO namenode.NNStorageRetentionManager: Going to retain 2 images with txid >= 0
+2026-10-12 03:23:31,018 INFO namenode.FSEditLog: Starting log segment at 137
+2026-10-12 03:23:31,206 INFO namenode.NameCache: initialized with 0 entries 0 lookups
+2026-10-12 03:23:31,206 INFO namenode.FSNamesystem: Finished loading FSImage in 1869 msecs
+2026-10-12 03:23:31,689 INFO namenode.NameNode: RPC server is binding to 0.0.0.0:8020
+2026-10-12 03:23:31,690 INFO namenode.NameNode: Enable NameNode state context:false
+2026-10-12 03:23:31,706 INFO ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, 
+queueCapacity: 1000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2026-10-12 03:23:31,726 INFO ipc.Server: Listener at 0.0.0.0:8020
+2026-10-12 03:23:31,728 INFO ipc.Server: Starting Socket Reader #1 for port 8020
+2026-10-12 03:23:31,832 INFO namenode.FSNamesystem: Registered FSNamesystemState, ReplicatedBlocksState and 
+ECBlockGroupsState MBeans.
+2026-10-12 03:23:31,834 INFO common.Util: Assuming 'file' scheme for path /hadoop/dfs/name in configuration.
+2026-10-12 03:23:31,872 INFO namenode.LeaseManager: Number of blocks under construction: 0
+2026-10-12 03:23:31,890 INFO blockmanagement.DatanodeAdminDefaultMonitor: Initialized the Default Decommission and 
+Maintenance monitor
+2026-10-12 03:23:31,893 INFO blockmanagement.BlockManager: Start MarkedDeleteBlockScrubber thread
+2026-10-12 03:23:31,906 INFO hdfs.StateChange: STATE* Safe mode ON. 
+The reported blocks 0 needs additional 18 blocks to reach the threshold 0.9990 of total blocks 19.
+The minimum number of live datanodes is not required. Safe mode will be turned off automatically once the thresholds 
+have been reached.
+2026-10-12 03:23:31,951 INFO ipc.Server: IPC Server Responder: starting
+2026-10-12 03:23:31,951 INFO ipc.Server: IPC Server listener on 8020: starting
+2026-10-12 03:23:31,962 INFO namenode.NameNode: NameNode RPC up at: namenode/172.23.0.3:8020
+2026-10-12 03:23:31,968 INFO namenode.FSNamesystem: Starting services required for active state
+2026-10-12 03:23:31,968 INFO namenode.FSDirectory: Initializing quota with 12 thread(s)
+2026-10-12 03:23:31,990 INFO namenode.FSDirectory: Quota initialization completed in 21 milliseconds
+name space=25
+storage space=2147515004
+storage types=RAM_DISK=0, SSD=0, DISK=0, ARCHIVE=0, PROVIDED=0
+2026-10-12 03:23:31,997 INFO blockmanagement.CacheReplicationMonitor: Starting CacheReplicationMonitor with interval 
+30000 milliseconds
+2026-10-12 03:23:32,357 INFO ipc.Server: IPC Server handler 0 on default port 8020, call Call#0 Retry#0 
+org.apache.hadoop.hdfs.protocol.ClientProtocol.mkdirs from resourcemanager.hadoop_network:35262 / 172.23.0.2:35262: 
+org.apache.hadoop.hdfs.server.namenode.SafeModeException: Cannot create directory 
+/rmstate/FSRMStateRoot/RMDTSecretManagerRoot. Name node is in safe mode.
+The reported blocks 0 needs additional 18 blocks to reach the threshold 0.9990 of total blocks 19.
+The minimum number of live datanodes is not required. Safe mode will be turned off automatically once the thresholds 
+have been reached. NamenodeHostName:namenode
+2026-10-12 03:23:33,160 INFO hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(172.23.0.4:9866, 
+datanodeUuid=919bf9b2-618c-4fd6-964f-1d8b422c7777, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096) storage 
+919bf9b2-618c-4fd6-964f-1d8b422c7777
+2026-10-12 03:23:33,163 INFO net.NetworkTopology: Adding a new node: /default-rack/172.23.0.4:9866
+2026-10-12 03:23:33,164 INFO blockmanagement.BlockReportLeaseManager: Registered DN 
+919bf9b2-618c-4fd6-964f-1d8b422c7777 (172.23.0.4:9866).
+2026-10-12 03:23:33,167 INFO hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(172.23.0.6:9866, 
+datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096) storage 
+7b8dfb54-13e7-40f6-9df2-e120ba50a5d4
+2026-10-12 03:23:33,168 INFO net.NetworkTopology: Adding a new node: /default-rack/172.23.0.6:9866
+2026-10-12 03:23:33,169 INFO blockmanagement.BlockReportLeaseManager: Registered DN 
+7b8dfb54-13e7-40f6-9df2-e120ba50a5d4 (172.23.0.6:9866).
+2026-10-12 03:23:33,257 INFO hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(172.23.0.5:9866, 
+datanodeUuid=ec531a59-4f35-405b-ada9-ffec6b27f381, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096) storage 
+ec531a59-4f35-405b-ada9-ffec6b27f381
+2026-10-12 03:23:33,257 INFO net.NetworkTopology: Adding a new node: /default-rack/172.23.0.5:9866
+2026-10-12 03:23:33,257 INFO blockmanagement.BlockReportLeaseManager: Registered DN 
+ec531a59-4f35-405b-ada9-ffec6b27f381 (172.23.0.5:9866).
+2026-10-12 03:23:33,267 INFO blockmanagement.DatanodeDescriptor: Adding new storage ID 
+DS-5174ac15-fd9b-472f-ae75-f701903547da for DN 172.23.0.4:9866
+2026-10-12 03:23:33,320 INFO blockmanagement.DatanodeDescriptor: Adding new storage ID 
+DS-dcaaa9ac-1268-45a2-9643-b7dbb4de6c1b for DN 172.23.0.5:9866
+2026-10-12 03:23:33,340 INFO blockmanagement.DatanodeDescriptor: Adding new storage ID 
+DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 for DN 172.23.0.6:9866
+2026-10-12 03:23:33,375 INFO BlockStateChange: BLOCK* processReport 0xa9a9592cd8e10987 with lease ID 
+0x253320c9c868f6fa: Processing first storage report for DS-dcaaa9ac-1268-45a2-9643-b7dbb4de6c1b from datanode 
+DatanodeRegistration(172.23.0.5:9866, datanodeUuid=ec531a59-4f35-405b-ada9-ffec6b27f381, infoPort=9864, 
+infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096)
+2026-10-12 03:23:33,381 INFO blockmanagement.BlockManager: initializing replication queues
+2026-10-12 03:23:33,382 INFO hdfs.StateChange: STATE* Safe mode extension entered. 
+The reported blocks 18 has reached the threshold 0.9990 of total blocks 19. The minimum number of live datanodes is 
+not required. In safe mode extension. Safe mode will be turned off automatically in 29 seconds.
+2026-10-12 03:23:33,383 INFO BlockStateChange: BLOCK* processReport 0xa9a9592cd8e10987 with lease ID 
+0x253320c9c868f6fa: from storage DS-dcaaa9ac-1268-45a2-9643-b7dbb4de6c1b node DatanodeRegistration(172.23.0.5:9866, 
+datanodeUuid=ec531a59-4f35-405b-ada9-ffec6b27f381, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096), blocks: 18, 
+hasStaleStorage: false, processing time: 8 msecs, invalidatedBlocks: 0
+2026-10-12 03:23:33,385 INFO blockmanagement.BlockManager: Total number of blocks            = 19
+2026-10-12 03:23:33,386 INFO blockmanagement.BlockManager: Number of invalid blocks          = 0
+2026-10-12 03:23:33,386 INFO blockmanagement.BlockManager: Number of under-replicated blocks = 19
+2026-10-12 03:23:33,386 INFO blockmanagement.BlockManager: Number of  over-replicated blocks = 0
+2026-10-12 03:23:33,386 INFO blockmanagement.BlockManager: Number of blocks being written    = 0
+2026-10-12 03:23:33,386 INFO hdfs.StateChange: STATE* Replication Queue initialization scan for invalid, over- and 
+under-replicated blocks completed in 3 msec
+2026-10-12 03:23:33,386 INFO BlockStateChange: BLOCK* processReport 0xf15169d7b202877b with lease ID 
+0x253320c9c868f6f9: Processing first storage report for DS-5174ac15-fd9b-472f-ae75-f701903547da from datanode 
+DatanodeRegistration(172.23.0.4:9866, datanodeUuid=919bf9b2-618c-4fd6-964f-1d8b422c7777, infoPort=9864, 
+infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096)
+2026-10-12 03:23:33,390 INFO BlockStateChange: BLOCK* processReport 0xf15169d7b202877b with lease ID 
+0x253320c9c868f6f9: from storage DS-5174ac15-fd9b-472f-ae75-f701903547da node DatanodeRegistration(172.23.0.4:9866, 
+datanodeUuid=919bf9b2-618c-4fd6-964f-1d8b422c7777, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096), blocks: 17, 
+hasStaleStorage: false, processing time: 4 msecs, invalidatedBlocks: 0
+2026-10-12 03:23:33,391 INFO BlockStateChange: BLOCK* processReport 0xc3f3c5a14477e190 with lease ID 
+0x253320c9c868f6fb: Processing first storage report for DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 from datanode 
+DatanodeRegistration(172.23.0.6:9866, datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, 
+infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096)
+2026-10-12 03:23:33,392 INFO BlockStateChange: BLOCK* processReport 0xc3f3c5a14477e190 with lease ID 
+0x253320c9c868f6fb: from storage DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 node DatanodeRegistration(172.23.0.6:9866, 
+datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096), blocks: 3, 
+hasStaleStorage: false, processing time: 0 msecs, invalidatedBlocks: 0
+2026-10-12 03:23:40,286 INFO ipc.Server: IPC Server handler 6 on default port 8020, call Call#0 Retry#0 
+org.apache.hadoop.hdfs.protocol.ClientProtocol.mkdirs from resourcemanager.hadoop_network:35272 / 172.23.0.2:35272: 
+org.apache.hadoop.hdfs.server.namenode.SafeModeException: Cannot create directory 
+/rmstate/FSRMStateRoot/RMDTSecretManagerRoot. Name node is in safe mode.
+The reported blocks 19 has reached the threshold 0.9990 of total blocks 19. The minimum number of live datanodes is 
+not required. In safe mode extension. Safe mode will be turned off automatically in 23 seconds. 
+NamenodeHostName:namenode
+2026-10-12 03:23:46,093 INFO ipc.Server: IPC Server handler 2 on default port 8020, call Call#0 Retry#0 
+org.apache.hadoop.hdfs.protocol.ClientProtocol.mkdirs from resourcemanager.hadoop_network:52374 / 172.23.0.2:52374: 
+org.apache.hadoop.hdfs.server.namenode.SafeModeException: Cannot create directory 
+/rmstate/FSRMStateRoot/RMDTSecretManagerRoot. Name node is in safe mode.
+The reported blocks 19 has reached the threshold 0.9990 of total blocks 19. The minimum number of live datanodes is 
+not required. In safe mode extension. Safe mode will be turned off automatically in 17 seconds. 
+NamenodeHostName:namenode
+2026-10-12 03:23:51,493 INFO ipc.Server: IPC Server handler 9 on default port 8020, call Call#0 Retry#0 
+org.apache.hadoop.hdfs.protocol.ClientProtocol.mkdirs from resourcemanager.hadoop_network:47148 / 172.23.0.2:47148: 
+org.apache.hadoop.hdfs.server.namenode.SafeModeException: Cannot create directory 
+/rmstate/FSRMStateRoot/RMDTSecretManagerRoot. Name node is in safe mode.
+The reported blocks 19 has reached the threshold 0.9990 of total blocks 19. The minimum number of live datanodes is 
+not required. In safe mode extension. Safe mode will be turned off automatically in 11 seconds. 
+NamenodeHostName:namenode
+2026-10-12 03:23:53,382 INFO hdfs.StateChange: STATE* Safe mode ON, in safe mode extension. 
+The reported blocks 19 has reached the threshold 0.9990 of total blocks 19. The minimum number of live datanodes is 
+not required. In safe mode extension. Safe mode will be turned off automatically in 9 seconds.
+2026-10-12 03:23:57,576 INFO ipc.Server: IPC Server handler 8 on default port 8020, call Call#0 Retry#0 
+org.apache.hadoop.hdfs.protocol.ClientProtocol.mkdirs from resourcemanager.hadoop_network:47150 / 172.23.0.2:47150: 
+org.apache.hadoop.hdfs.server.namenode.SafeModeException: Cannot create directory 
+/rmstate/FSRMStateRoot/RMDTSecretManagerRoot. Name node is in safe mode.
+The reported blocks 19 has reached the threshold 0.9990 of total blocks 19. The minimum number of live datanodes is 
+not required. In safe mode extension. Safe mode will be turned off automatically in 5 seconds. 
+NamenodeHostName:namenode
+2026-10-12 03:24:03,385 INFO hdfs.StateChange: STATE* Safe mode is OFF
+2026-10-12 03:24:03,385 INFO hdfs.StateChange: STATE* Leaving safe mode after 31 secs
+2026-10-12 03:24:03,387 INFO hdfs.StateChange: STATE* Network topology has 1 racks and 3 datanodes
+2026-10-12 03:24:03,387 INFO hdfs.StateChange: STATE* UnderReplicatedBlocks has 0 blocks
+2026-10-12 03:24:04,969 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:04,972 INFO hdfs.StateChange: BLOCK* allocate blk_1073741848_1024, replicas=172.23.0.6:9866, 
+172.23.0.5:9866 for /rmstate/FSRMStateRoot/EpochNode.new.tmp
+2026-10-12 03:24:05,170 INFO namenode.FSNamesystem: BLOCK* blk_1073741848_1024 is COMMITTED but not COMPLETE(numNodes= 
+0 <  minimum = 1) in file /rmstate/FSRMStateRoot/EpochNode.new.tmp
+2026-10-12 03:24:05,578 INFO hdfs.StateChange: DIR* completeFile: /rmstate/FSRMStateRoot/EpochNode.new.tmp is closed 
+by DFSClient_NONMAPREDUCE_1730698606_1
+2026-10-12 03:24:05,818 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:05,820 INFO hdfs.StateChange: BLOCK* allocate blk_1073741849_1025, replicas=172.23.0.4:9866, 
+172.23.0.6:9866 for /rmstate/FSRMStateRoot/RMDTSecretManagerRoot/DelegationKey_3.tmp
+2026-10-12 03:24:05,929 INFO hdfs.StateChange: DIR* completeFile: 
+/rmstate/FSRMStateRoot/RMDTSecretManagerRoot/DelegationKey_3.tmp is closed by DFSClient_NONMAPREDUCE_1730698606_1
+2026-10-12 03:24:05,951 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:05,952 INFO hdfs.StateChange: BLOCK* allocate blk_1073741850_1026, replicas=172.23.0.5:9866, 
+172.23.0.6:9866 for /rmstate/FSRMStateRoot/RMDTSecretManagerRoot/DelegationKey_4.tmp
+2026-10-12 03:24:06,022 INFO hdfs.StateChange: DIR* completeFile: 
+/rmstate/FSRMStateRoot/RMDTSecretManagerRoot/DelegationKey_4.tmp is closed by DFSClient_NONMAPREDUCE_1730698606_1
+2026-10-12 03:24:06,618 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:06,619 INFO hdfs.StateChange: BLOCK* allocate blk_1073741851_1027, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /rmstate/FSRMStateRoot/ProxyCARoot/caCert.new.tmp
+2026-10-12 03:24:06,651 INFO hdfs.StateChange: DIR* completeFile: /rmstate/FSRMStateRoot/ProxyCARoot/caCert.new.tmp is 
+closed by DFSClient_NONMAPREDUCE_1730698606_1
+2026-10-12 03:24:06,697 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:06,698 INFO hdfs.StateChange: BLOCK* allocate blk_1073741852_1028, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /rmstate/FSRMStateRoot/ProxyCARoot/caPrivateKey.new.tmp
+2026-10-12 03:24:06,721 INFO hdfs.StateChange: DIR* completeFile: 
+/rmstate/FSRMStateRoot/ProxyCARoot/caPrivateKey.new.tmp is closed by DFSClient_NONMAPREDUCE_1730698606_1
+2026-10-12 03:24:30,678 INFO namenode.FSEditLog: Number of transactions: 45 Total time for transactions(ms): 19 Number 
+of transactions batched in Syncs: 141 Number of syncs: 40 SyncTimes(ms): 73 
+2026-10-12 03:24:30,721 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:30,722 INFO hdfs.StateChange: BLOCK* allocate blk_1073741853_1029, replicas=172.23.0.5:9866, 
+172.23.0.6:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-12 03:24:32,375 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:32,375 INFO hdfs.StateChange: BLOCK* allocate blk_1073741854_1030, replicas=172.23.0.4:9866, 
+172.23.0.6:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-12 03:24:34,632 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:34,633 INFO hdfs.StateChange: BLOCK* allocate blk_1073741855_1031, replicas=172.23.0.6:9866, 
+172.23.0.4:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-12 03:24:36,437 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:36,437 INFO hdfs.StateChange: BLOCK* allocate blk_1073741856_1032, replicas=172.23.0.5:9866, 
+172.23.0.6:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-12 03:24:38,043 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:38,045 INFO hdfs.StateChange: BLOCK* allocate blk_1073741857_1033, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-12 03:24:39,731 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:39,733 INFO hdfs.StateChange: BLOCK* allocate blk_1073741858_1034, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-12 03:24:41,071 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:41,072 INFO hdfs.StateChange: BLOCK* allocate blk_1073741859_1035, replicas=172.23.0.4:9866, 
+172.23.0.5:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-12 03:24:42,487 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:24:42,488 INFO hdfs.StateChange: BLOCK* allocate blk_1073741860_1036, replicas=172.23.0.5:9866, 
+172.23.0.4:9866 for /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_
+2026-10-12 03:24:43,930 INFO hdfs.StateChange: DIR* completeFile: /grupo04/dataset_1GB/dataset_grupo04_1GB._COPYING_ 
+is closed by DFSClient_NONMAPREDUCE_596164969_1
+2026-10-12 03:24:52,010 INFO namenode.NameNode: FSCK started by root (auth:SIMPLE) from /172.23.0.3 for path 
+/grupo04/dataset_1GB/dataset_grupo04_1GB at Mon Oct 12 03:24:52 UTC 2026
+2026-10-12 03:25:53,493 INFO namenode.NameNode: FSCK started by root (auth:SIMPLE) from /172.23.0.3 for path 
+/grupo04/dataset_1GB/dataset_grupo04_1GB at Mon Oct 12 03:25:53 UTC 2026
+2026-10-12 03:26:59,931 INFO namenode.NameNode: FSCK started by root (auth:SIMPLE) from /172.23.0.3 for path 
+/grupo04/dataset_1GB/dataset_grupo04_1GB at Mon Oct 12 03:26:59 UTC 2026
+2026-10-12 03:27:06,868 INFO hdfs.StateChange: BLOCK* removeDeadDatanode: lost heartbeat from 172.23.0.6:9866, 
+removeBlocksFromBlockMap true
+2026-10-12 03:27:06,965 INFO net.NetworkTopology: Removing a node: /default-rack/172.23.0.6:9866
+2026-10-12 03:27:07,893 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:27:07,895 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:27:07,895 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:27:07,895 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:27:10,904 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:27:10,905 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:27:10,905 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:27:10,906 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:27:13,903 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:27:13,904 INFO blockmanagement.BlockPlacementPolicy: Not enough replicas was chosen. Reason: 
+{NO_REQUIRED_STORAGE_TYPE=1}
+2026-10-12 03:37:37,456 INFO namenode.NameNode: FSCK started by root (auth:SIMPLE) from /172.23.0.3 for path 
+/grupo04/dataset_1GB/dataset_grupo04_1GB at Mon Oct 12 03:37:37 UTC 2026
+2026-10-12 03:37:47,507 INFO hdfs.StateChange: BLOCK* registerDatanode: from DatanodeRegistration(172.23.0.6:9866, 
+datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096) storage 
+7b8dfb54-13e7-40f6-9df2-e120ba50a5d4
+2026-10-12 03:37:47,508 INFO net.NetworkTopology: Removing a node: /default-rack/172.23.0.6:9866
+2026-10-12 03:37:47,510 INFO net.NetworkTopology: Adding a new node: /default-rack/172.23.0.6:9866
+2026-10-12 03:37:47,511 INFO blockmanagement.DatanodeDescriptor: 
+[DISK]DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3:NORMAL:172.23.0.6:9866 failed.
+2026-10-12 03:37:47,511 INFO blockmanagement.DatanodeDescriptor: Removed storage 
+[DISK]DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3:FAILED:172.23.0.6:9866 from DataNode 172.23.0.6:9866
+2026-10-12 03:37:47,620 INFO blockmanagement.DatanodeDescriptor: Adding new storage ID 
+DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 for DN 172.23.0.6:9866
+2026-10-12 03:37:47,620 WARN blockmanagement.BlockReportLeaseManager: DN 7b8dfb54-13e7-40f6-9df2-e120ba50a5d4 
+(172.23.0.6:9866) requested a lease even though it wasn't yet registered.  Registering now.
+2026-10-12 03:37:47,620 INFO blockmanagement.BlockReportLeaseManager: Registered DN 
+7b8dfb54-13e7-40f6-9df2-e120ba50a5d4 (172.23.0.6:9866).
+2026-10-12 03:37:47,684 INFO BlockStateChange: BLOCK* processReport 0x42bf74572aca58eb with lease ID 
+0x253320c9c868f6fc: Processing first storage report for DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 from datanode 
+DatanodeRegistration(172.23.0.6:9866, datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, 
+infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096)
+2026-10-12 03:37:47,690 INFO BlockStateChange: BLOCK* processReport 0x42bf74572aca58eb with lease ID 
+0x253320c9c868f6fc: from storage DS-cf0abf3e-bb52-4a3f-8596-36bb909004e3 node DatanodeRegistration(172.23.0.6:9866, 
+datanodeUuid=7b8dfb54-13e7-40f6-9df2-e120ba50a5d4, infoPort=9864, infoSecurePort=0, ipcPort=9867, 
+storageInfo=lv=-57;cid=CID-8511b347-879f-453a-bac9-5767f8e35f5e;nsid=1105659745;c=1791689256096), blocks: 10, 
+hasStaleStorage: false, processing time: 7 msecs, invalidatedBlocks: 0
+2026-10-12 03:37:49,946 INFO blockmanagement.BlockManager: Rescan of postponedMisreplicatedBlocks completed in 9 
+msecs. 0 blocks are left. 10 blocks were removed.
+2026-10-12 03:38:44,948 INFO namenode.NameNode: FSCK started by root (auth:SIMPLE) from /172.23.0.3 for path 
+/grupo04/dataset_1GB/dataset_grupo04_1GB at Mon Oct 12 03:38:44 UTC 2026
