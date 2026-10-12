@@ -19,20 +19,74 @@ Persona 1
 Persona 1
 
 ## 5. Prueba de fallo - Dataset 1 GB
-
-Persona 2
+Todas las evidencias están en la carpeta evidencia, dataset 1GB
 
 ### 5.1 Estado inicial
+Antes de realizar la prueba de tolerancia a fallos, se verificó que el clúster Hadoop estuviera funcionando correctamente y que los tres DataNodes se encontraran activos.
+
+Se utilizó el siguiente comando para comprobar el estado de los nodos: docker exec namenode hdfs dfsadmin -report
+
+El clúster se encontraba operativo, con tres DataNodes activos y disponibles para almacenar bloques y sus respectivas réplicas.
+
+También se verificó que HDFS tuviera configurado un factor de replicación igual a 2, mediante el comando: docker exec namenode hdfs getconf -confKey dfs.replication
+
+El resultado fue 2, lo que significa que HDFS debe mantener dos copias de cada bloque del archivo.
 
 ### 5.2 Distribucion de bloques y replicas
+El dataset utilizado para la prueba fue dataset_grupo04_1GB, almacenado en el directorio de HDFS: /grupo04/dataset_1GB/dataset_grupo04_1GB
+
+El archivo tiene un tamaño de 1.073.741.824 bytes y se encuentra dividido en 8 bloques de 128 MB, aproximadamente, con un factor de replicación de 2.
+
+Para consultar la ubicación de los bloques y sus réplicas se ejecutó el siguiente comando: docker exec namenode hdfs fsck /grupo04/dataset_1GB -files -blocks -locations
+
+El resultado permitió identificar la distribución de los bloques entre los tres DataNodes del clúster:
+datanode1: 172.23.0.5
+datanode2: 172.23.0.4
+datanode3: 172.23.0.3
+
+Cada bloque tenía dos réplicas distribuidas entre los DataNodes. Esta redundancia permite que los datos sigan disponibles si uno de los nodos deja de funcionar, siempre que exista otra copia accesible de cada bloque.
 
 ### 5.3 Falla del DataNode
+Para simular una falla se detuvo el contenedor datanode2, sin detener el NameNode ni los otros dos DataNodes.
+
+Se utilizó el siguiente comando: docker stop datanode2
+
+La detención se realizó aproximadamente a las 12:40 a. m.
+Después de detener el contenedor, HDFS necesitó un tiempo para detectar que el nodo había dejado de enviar sus señales de comunicación periódicas, conocidas como heartbeats.
+Una vez detectada la falla, el NameNode marcó el DataNode como muerto. El reporte de HDFS registró dos DataNodes activos y uno muerto, confirmando que el clúster había detectado correctamente la pérdida del nodo.
+
+Para verificar el estado de los nodos se ejecutó: docker exec namenode hdfs dfsadmin -report
 
 ### 5.4 Estado durante la falla
+Después de detener datanode2, se verificó el estado del archivo mediante el siguiente comando: docker exec namenode hdfs fsck /grupo04/dataset_1GB -files -blocks -locations
+
+También se comprobó que el archivo siguiera siendo legible mediante el cálculo de su hash MD5: docker exec namenode bash -c "hdfs dfs -cat /grupo04/dataset_1GB/dataset_grupo04_1GB | md5sum"
+
+El resultado obtenido fue: d4ee41e7d8325d7a30bce787b5257830
+
+El hash coincidió con el valor original del archivo, lo que confirmó que los datos continuaban disponibles y podían leerse correctamente a pesar de la falla del DataNode.
+Los bloques que tenían una réplica en datanode2 conservaron su otra copia en alguno de los DataNodes que permanecieron activos. Por esta razón, la falla no provocó la pérdida del archivo.
+
+Observación importante: en esta prueba, el análisis fsck realizado aproximadamente a las 12:43 a. m. se efectuó cuando HDFS ya había recuperado las réplicas faltantes. Por ello, el estado temporal de subreplicación no quedó registrado en esa captura, aunque el proceso de recuperación sí se produjo.
 
 ### 5.5 Recuperacion
+Después de detectar que datanode2 había dejado de funcionar, el NameNode identificó las réplicas que faltaban y comenzó automáticamente el proceso de replicación hacia los DataNodes disponibles.
+
+Para comprobar el progreso de la recuperación se utilizó: docker exec namenode hdfs dfsadmin -report
+
+Se verificó el número de bloques subreplicados mediante el reporte y se observó que HDFS había recuperado las réplicas necesarias. El número de bloques subreplicados llegó a cero antes de transcurridos tres minutos desde la falla, según los registros de la prueba.
+
+Posteriormente, se consultó nuevamente la ubicación de los bloques: docker exec namenode hdfs fsck /grupo04/dataset_1GB -files -blocks -locations
+
+El resultado confirmó que el archivo se encontraba en estado HEALTHY, con los 8 bloques disponibles y un promedio de replicación de 2.0. Las nuevas réplicas quedaron distribuidas entre datanode1 y datanode3.
+Una vez comprobada la recuperación automática, se inició nuevamente el DataNode detenido: docker start datanode2
+
+Finalmente, se verificó que los tres DataNodes estuvieran activos y que el archivo continuara íntegro mediante un nuevo cálculo de su hash MD5.
 
 ### 5.6 Analisis
+La prueba demostró que HDFS puede mantener la disponibilidad de los datos ante la falla de un DataNode. El dataset de 1 GB estaba dividido en 8 bloques, cada uno con dos réplicas.
+Al detener datanode2, el archivo continuó accesible porque los bloques conservaban otras copias en los nodos activos. La verificación del MD5 confirmó que los datos se mantuvieron íntegros.
+Finalmente, HDFS recuperó automáticamente las réplicas faltantes y, al reiniciar datanode2, el clúster volvió a contar con tres DataNodes activos. Esto demuestra que la replicación permite proteger la información y mantener su disponibilidad ante fallos.
 
 ## 6. Prueba de fallo - Dataset 10 GB
 
@@ -366,19 +420,36 @@ El estado final mostró:
 | Característica                       | Dataset 1 GB        | Dataset 10 GB                                                               |
 | ------------------------------------ | ------------------- | --------------------------------------------------------------------------- |
 | Tamaño                               | 1 GB                | 10 GB                                                                       |
-| Número de bloques                    | Pendiente Persona 2 | 80                                                                          |
-| Factor de replicación                | Pendiente Persona 2 | 2                                                                           |
-| DataNode afectado                    | Pendiente Persona 2 | datanode1                                                                   |
-| Bloques afectados                    | Pendiente Persona 2 | 50                                                                          |
-| Bloques disponibles después de falla | Pendiente Persona 2 | 80 de 80                                                                    |
-| ¿Archivo accesible?                  | Pendiente Persona 2 | Sí                                                                          |
-| ¿Existieron bloques subreplicados?   | Pendiente Persona 2 | Sí, 50                                                                      |
-| Tiempo de recuperación               | Pendiente Persona 2 | Recuperación confirmada dentro de un intervalo de aproximadamente 9 minutos |
-| Nuevas réplicas                      | Pendiente Persona 2 | Redistribuidas entre datanode2 y datanode3                                  |
+| Número de bloques                    | 8 | 80                                                                          |
+| Factor de replicación                | 2 | 2                                                                           |
+| DataNode afectado                    | datanode2 | datanode1                                                                   |
+| Bloques afectados                    | Los que tenían réplicas en datanode2 | 50                                                                          |
+| Bloques disponibles después de falla | 8 de 8 | 80 de 80                                                                    |
+| ¿Archivo accesible?                  | Sí   | Sí                                                                          |
+| ¿Existieron bloques subreplicados?   | Sí, temporalmente; no se capturó el número exacto | Sí, 50                                                                      |
+| Tiempo de recuperación               | Menos de 3 minutos, según el manual | Recuperación confirmada dentro de un intervalo de aproximadamente 9 minutos |
+| Nuevas réplicas                      | Redistribuidas entre datanode1 y datanode3 | Redistribuidas entre datanode2 y datanode3                                  |
 
 ## 8. Preguntas de analisis y exposicion
 
 Personas 1, 2 y 3
+
+
+### Pregunta 4
+¿Por qué un factor de replicación de 2 no significa necesariamente que existan dos copias completas del archivo en dos DataNodes?
+
+Un factor de replicación de 2 significa que cada bloque del archivo debe tener dos copias, no que existan dos copias completas del archivo almacenadas en dos DataNodes diferentes. Como HDFS divide los archivos en bloques y distribuye sus réplicas entre los nodos, un archivo puede estar repartido entre varios DataNodes. Por ejemplo, el dataset de 1 GB se dividió en 8 bloques, con 2 réplicas por bloque.
+
+### Pregunta 5
+¿Cuál es la relación entre tamaño de bloque y número de bloques?
+
+La relación entre el tamaño del bloque y el número de bloques es inversamente proporcional: cuanto mayor sea el tamaño del bloque, menor será la cantidad de bloques necesarios para almacenar un archivo, y viceversa. En nuestras pruebas, con bloques de 128 MiB, el dataset de 1 GiB se dividió en 8 bloques, mientras que el de 10 GiB se dividió en 80 bloques.
+
+### Pregunta 6
+¿Por qué el dataset de 10 GB permite observar un comportamiento más representativo de un sistema distribuido que el dataset de 1 GB?
+
+El dataset de 10 GB permite observar un comportamiento más representativo de un sistema distribuido porque contiene más bloques y, por tanto, permite analizar una mayor cantidad de réplicas distribuidas entre los DataNodes. En la prueba, la falla del datanode1 provocó que 50 bloques quedaran temporalmente subreplicados, aunque los 80 bloques siguieron disponibles y el archivo permaneció accesible. Esto permitió observar con mayor claridad la recuperación automática de las réplicas por parte de HDFS.
+
 
 ### Pregunta 7
 
@@ -426,13 +497,19 @@ evidencias/grupo04/dataset_10GB/
 
 En estas evidencias se registró el estado inicial del clúster, la distribución de bloques y réplicas, la caída de `datanode1`, la aparición de bloques subreplicados, la lectura completa del archivo durante la falla, la recuperación automática de las réplicas y el estado final del sistema.
 
+Las evidencias correspondientes a la prueba de tolerancia a fallos con el dataset de 1 GB se encuentran en:
+
+```text
+evidencias/grupo04/dataset_1GB/
+```
+
 ## 10. Conclusion
 
 Entre los tres.
 
 ### Conclusion - Dataset 1 GB
 
-Persona 2
+La prueba con el dataset de 1 GB demostró que HDFS puede mantener los datos disponibles ante la falla de un DataNode gracias a la replicación. Aunque se detuvo datanode2, el archivo continuó siendo accesible y su integridad se verificó mediante el hash MD5. Posteriormente, HDFS recuperó automáticamente las réplicas faltantes y el archivo volvió a estar en estado HEALTHY. Esto demuestra que la replicación ayuda a prevenir la pérdida de información y garantiza la disponibilidad de los datos ante fallos.
 
 ### Conclusion - Dataset 10 GB
 
