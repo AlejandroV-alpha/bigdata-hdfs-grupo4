@@ -76,66 +76,66 @@ Para garantizar la autoría y trazabilidad de la práctica según las directrice
 ### 3.2 Diagrama de arquitectura del clúster HDFS
 
 ```mermaid
-graph TB
-    subgraph Host["Host / Máquina Anfitriona"]
-        CLI["Cliente CLI / Scripts PowerShell<br/>(hdfs dfs, hdfs fsck, dfsadmin)"]
-        Browser["Navegador Web<br/>(Web UI: http://localhost:9870)"]
+flowchart TB
+    subgraph HOST["Host / Máquina Anfitriona"]
+        CLI["Cliente CLI / Scripts PowerShell<br/>hdfs dfs · hdfs fsck · dfsadmin"]
+        BROWSER["Navegador Web<br/>Web UI: localhost:9870"]
     end
 
-    subgraph DockerNet["Docker Network: hadoop_network (Bridge 172.23.0.0/16)"]
-        subgraph NN_Box["Contenedor: namenode"]
+    subgraph NETWORK["Docker Network: hadoop_network · Bridge 172.23.0.0/16"]
+        subgraph NN_BOX["Contenedor: namenode"]
             NN["NameNode Daemon<br/>RPC: 8020 | HTTP: 9870"]
-            FSImage["FsImage + EditLogs<br/>(Metadatos de Bloques)"]
-            NN_Vol[("Volumen Persistente:<br/>hadoop_namenode")]
-            NN --- FSImage
-            FSImage --- NN_Vol
+            META["FsImage + EditLogs<br/>Metadatos de bloques"]
+            NVOL[("Volumen persistente<br/>hadoop_namenode")]
+            NN --- META
+            META --- NVOL
         end
 
-        subgraph DN1_Box["Contenedor: datanode1 (172.23.0.5)"]
-            DN1["DataNode Daemon 1<br/>Data Transfer: 9866 | HTTP: 9864"]
-            DN1_Vol[("Volumen Persistente:<br/>hadoop_datanode1")]
-            DN1 --- DN1_Vol
+        subgraph DN1_BOX["Contenedor: datanode1 · 172.23.0.5"]
+            DN1["DataNode Daemon 1<br/>Transfer: 9866 | HTTP: 9864"]
+            V1[("Volumen persistente<br/>hadoop_datanode1")]
+            DN1 --- V1
         end
 
-        subgraph DN2_Box["Contenedor: datanode2 (172.23.0.4)"]
-            DN2["DataNode Daemon 2<br/>Data Transfer: 9866 | HTTP: 9864"]
-            DN2_Vol[("Volumen Persistente:<br/>hadoop_datanode2")]
-            DN2 --- DN2_Vol
+        subgraph DN2_BOX["Contenedor: datanode2 · 172.23.0.4"]
+            DN2["DataNode Daemon 2<br/>Transfer: 9866 | HTTP: 9864"]
+            V2[("Volumen persistente<br/>hadoop_datanode2")]
+            DN2 --- V2
         end
 
-        subgraph DN3_Box["Contenedor: datanode3 (172.23.0.3)"]
-            DN3["DataNode Daemon 3<br/>Data Transfer: 9866 | HTTP: 9864"]
-            DN3_Vol[("Volumen Persistente:<br/>hadoop_datanode3")]
-            DN3 --- DN3_Vol
+        subgraph DN3_BOX["Contenedor: datanode3 · 172.23.0.3"]
+            DN3["DataNode Daemon 3<br/>Transfer: 9866 | HTTP: 9864"]
+            V3[("Volumen persistente<br/>hadoop_datanode3")]
+            DN3 --- V3
         end
 
-        subgraph YARN_Box["Servicios YARN"]
-            RM["ResourceManager (:8089)"]
-            JHS["HistoryServer (:8188)"]
-            NM["NodeManager (:8042)"]
+        subgraph YARN["Servicios YARN"]
+            RM["ResourceManager<br/>Puerto: 8089"]
+            JHS["HistoryServer<br/>Puerto: 8188"]
+            NM["NodeManager<br/>Puerto: 8042"]
         end
     end
 
-    CLI -->|Comandos RPC :8020| NN
-    Browser -->|Monitoreo Web :9870| NN
+    CLI -->|"Comandos HDFS · RPC 8020"| NN
+    BROWSER -->|"Monitoreo web · 9870"| NN
 
-    NN <-->|Heartbeats (c/3s) & Block Reports| DN1
-    NN <-->|Heartbeats (c/3s) & Block Reports| DN2
-    NN <-->|Heartbeats (c/3s) & Block Reports| DN3
+    NN <-->|"Heartbeats y Block Reports"| DN1
+    NN <-->|"Heartbeats y Block Reports"| DN2
+    NN <-->|"Heartbeats y Block Reports"| DN3
 
-    DN1 <.-.->|Replicación cruzada R=2| DN2
-    DN2 <.-.->|Replicación cruzada R=2| DN3
-    DN1 <.-.->|Replicación cruzada R=2| DN3
+    DN1 <.->|"Replicación · R=2"| DN2
+    DN2 <.->|"Replicación · R=2"| DN3
+    DN1 <.->|"Replicación · R=2"| DN3
 
-    classDef master fill:#234a6f,stroke:#1d3557,stroke-width:2px,color:#ffffff;
-    classDef worker fill:#2a9d8f,stroke:#264653,stroke-width:2px,color:#ffffff;
-    classDef client fill:#e76f51,stroke:#f4a261,stroke-width:2px,color:#ffffff;
-    classDef yarn fill:#6c757d,stroke:#495057,stroke-width:1px,color:#ffffff;
+    classDef master fill:#234a6f,stroke:#1d3557,stroke-width:2px,color:#ffffff
+    classDef worker fill:#2a9d8f,stroke:#264653,stroke-width:2px,color:#ffffff
+    classDef client fill:#e76f51,stroke:#f4a261,stroke-width:2px,color:#ffffff
+    classDef yarnStyle fill:#6c757d,stroke:#495057,stroke-width:1px,color:#ffffff
 
-    class NN,FSImage master;
-    class DN1,DN2,DN3 worker;
-    class CLI,Browser client;
-    class RM,JHS,NM yarn;
+    class NN,META master
+    class DN1,DN2,DN3 worker
+    class CLI,BROWSER client
+    class RM,JHS,NM yarnStyle
 ```
 
 #### Descripción técnica de componentes:
