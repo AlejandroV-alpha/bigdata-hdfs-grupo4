@@ -77,66 +77,69 @@ Para garantizar la autoría y trazabilidad de la práctica según las directrice
 
 ```mermaid
 flowchart TB
-    subgraph HOST["Host / Máquina Anfitriona"]
-        CLI["Cliente CLI / Scripts PowerShell<br/>hdfs dfs · hdfs fsck · dfsadmin"]
-        BROWSER["Navegador Web<br/>Web UI: localhost:9870"]
+    subgraph HOST["Host / Máquina anfitriona"]
+        direction LR
+        CLI["Cliente CLI / PowerShell"]
+        WEB["Web UI :9870"]
     end
 
-    subgraph NETWORK["Docker Network: hadoop_network · Bridge 172.23.0.0/16"]
-        subgraph NN_BOX["Contenedor: namenode"]
-            NN["NameNode Daemon<br/>RPC: 8020 | HTTP: 9870"]
-            META["FsImage + EditLogs<br/>Metadatos de bloques"]
-            NVOL[("Volumen persistente<br/>hadoop_namenode")]
-            NN --- META
-            META --- NVOL
+    subgraph CLUSTER["Docker Network: hadoop_network · 172.23.0.0/16"]
+        direction TB
+
+        NN["NameNode<br/>RPC: 8020 · HTTP: 9870"]
+        META[("FsImage + EditLogs<br/>Metadatos")]
+        NN --- META
+
+        subgraph WORKERS["DataNodes · Replicación R=2"]
+            direction LR
+            D1["DataNode 1<br/>172.23.0.5"]
+            D2["DataNode 2<br/>172.23.0.4"]
+            D3["DataNode 3<br/>172.23.0.3"]
         end
 
-        subgraph DN1_BOX["Contenedor: datanode1 · 172.23.0.5"]
-            DN1["DataNode Daemon 1<br/>Transfer: 9866 | HTTP: 9864"]
-            V1[("Volumen persistente<br/>hadoop_datanode1")]
-            DN1 --- V1
-        end
-
-        subgraph DN2_BOX["Contenedor: datanode2 · 172.23.0.4"]
-            DN2["DataNode Daemon 2<br/>Transfer: 9866 | HTTP: 9864"]
-            V2[("Volumen persistente<br/>hadoop_datanode2")]
-            DN2 --- V2
-        end
-
-        subgraph DN3_BOX["Contenedor: datanode3 · 172.23.0.3"]
-            DN3["DataNode Daemon 3<br/>Transfer: 9866 | HTTP: 9864"]
-            V3[("Volumen persistente<br/>hadoop_datanode3")]
-            DN3 --- V3
+        subgraph STORAGE["Volúmenes persistentes"]
+            direction LR
+            V1[("hadoop_datanode1")]
+            V2[("hadoop_datanode2")]
+            V3[("hadoop_datanode3")]
         end
 
         subgraph YARN["Servicios YARN"]
-            RM["ResourceManager<br/>Puerto: 8089"]
-            JHS["HistoryServer<br/>Puerto: 8188"]
-            NM["NodeManager<br/>Puerto: 8042"]
+            direction LR
+            RM["ResourceManager<br/>:8089"]
+            NM["NodeManager<br/>:8042"]
+            JHS["HistoryServer<br/>:8188"]
         end
+
+        D1 --- V1
+        D2 --- V2
+        D3 --- V3
+
+        NN <--> D1
+        NN <--> D2
+        NN <--> D3
     end
 
-    CLI -->|"Comandos HDFS · RPC 8020"| NN
-    BROWSER -->|"Monitoreo web · 9870"| NN
+    CLI --> NN
+    WEB --> NN
 
-    NN <-->|"Heartbeats y Block Reports"| DN1
-    NN <-->|"Heartbeats y Block Reports"| DN2
-    NN <-->|"Heartbeats y Block Reports"| DN3
+    D1 <-.->|R=2| D2
+    D2 <-.->|R=2| D3
+    D1 <-.->|R=2| D3
 
-    DN1 <.->|"Replicación · R=2"| DN2
-    DN2 <.->|"Replicación · R=2"| DN3
-    DN1 <.->|"Replicación · R=2"| DN3
-
-    classDef master fill:#234a6f,stroke:#1d3557,stroke-width:2px,color:#ffffff
-    classDef worker fill:#2a9d8f,stroke:#264653,stroke-width:2px,color:#ffffff
-    classDef client fill:#e76f51,stroke:#f4a261,stroke-width:2px,color:#ffffff
-    classDef yarnStyle fill:#6c757d,stroke:#495057,stroke-width:1px,color:#ffffff
+    classDef master fill:#234a6f,stroke:#1d3557,color:#fff
+    classDef worker fill:#2a9d8f,stroke:#264653,color:#fff
+    classDef client fill:#e76f51,stroke:#f4a261,color:#fff
+    classDef yarnStyle fill:#6c757d,stroke:#495057,color:#fff
+    classDef storage fill:#343a40,stroke:#adb5bd,color:#fff
 
     class NN,META master
-    class DN1,DN2,DN3 worker
-    class CLI,BROWSER client
-    class RM,JHS,NM yarnStyle
+    class D1,D2,D3 worker
+    class CLI,WEB client
+    class RM,NM,JHS yarnStyle
+    class V1,V2,V3 storage
 ```
+
 
 #### Descripción técnica de componentes:
 1. **NameNode (`namenode`):** Servidor maestro de metadatos. Administra el espacio de nombres (*namespace*) del sistema de archivos y gestiona el mapeo de bloques a DataNodes. No almacena datos directamente, sino la tabla de localización de bloques en memoria.
