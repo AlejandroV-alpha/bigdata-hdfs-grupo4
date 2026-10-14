@@ -83,49 +83,40 @@ flowchart TB
         WEB["Web UI :9870"]
     end
 
-    subgraph CLUSTER["Docker Network: hadoop_network · 172.23.0.0/16"]
-        direction TB
+    CLI ~~~ WEB
 
-        NN["NameNode<br/>RPC: 8020 · HTTP: 9870"]
-        META[("FsImage + EditLogs<br/>Metadatos")]
-        NN --- META
-
-        subgraph WORKERS["DataNodes · Replicación R=2"]
-            direction LR
-            D1["DataNode 1<br/>172.23.0.5"]
-            D2["DataNode 2<br/>172.23.0.4"]
-            D3["DataNode 3<br/>172.23.0.3"]
-        end
-
-        subgraph STORAGE["Volúmenes persistentes"]
-            direction LR
-            V1[("hadoop_datanode1")]
-            V2[("hadoop_datanode2")]
-            V3[("hadoop_datanode3")]
-        end
-
-        subgraph YARN["Servicios YARN"]
-            direction LR
-            RM["ResourceManager<br/>:8089"]
-            NM["NodeManager<br/>:8042"]
-            JHS["HistoryServer<br/>:8188"]
-        end
-
-        D1 --- V1
-        D2 --- V2
-        D3 --- V3
-
-        NN <--> D1
-        NN <--> D2
-        NN <--> D3
-    end
+    NN["NameNode<br/>RPC: 8020 · HTTP: 9870"]
+    META[("FsImage + EditLogs<br/>Metadatos")]
+    NN --- META
 
     CLI --> NN
     WEB --> NN
 
+    NN <--> D1
+    NN <--> D2
+    NN <--> D3
+
+    subgraph NODES["DataNodes"]
+        direction LR
+        D1["DataNode 1<br/>172.23.0.5"]
+        D2["DataNode 2<br/>172.23.0.4"]
+        D3["DataNode 3<br/>172.23.0.3"]
+    end
+
     D1 <-.->|R=2| D2
     D2 <-.->|R=2| D3
     D1 <-.->|R=2| D3
+
+    D1 --- V1[("hadoop_datanode1")]
+    D2 --- V2[("hadoop_datanode2")]
+    D3 --- V3[("hadoop_datanode3")]
+
+    subgraph YARN["Servicios YARN"]
+        direction LR
+        RM["ResourceManager :8089"]
+        NM["NodeManager :8042"]
+        JHS["HistoryServer :8188"]
+    end
 
     classDef master fill:#234a6f,stroke:#1d3557,color:#fff
     classDef worker fill:#2a9d8f,stroke:#264653,color:#fff
